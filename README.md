@@ -61,8 +61,8 @@ can be fully represented are:
 ## References
   * [1] [YOLO](https://pjreddie.com/darknet/yolo/)
   * [2] [TensorFlow MNIST](https://www.tensorflow.org/get_started/mnist/beginners)
-  * [3] [LINEMOD]()
+  * [3] [LINEMOD](http://campar.in.tum.de/pub/hinterstoisser2011linemod/hinterstoisser2011linemod.pdf)
   * [4] [Object Recognition Kitchen](https://wg-perception.github.io/ork_tutorials/tutorial03/tutorial.html)
-  * [5] [Attribute Detector](http://campar.in.tum.de/pub/hinterstoisser2011linemod/hinterstoisser2011linemod.pdf)
+  * [5] [Attribute Detector](https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/shape/attributes-poselets-iccv11.pdf)
   * [6] [URDFs on the parameter server](http://wiki.ros.org/urdf/Tutorials/Using%20urdf%20with%20robot_state_publisher#Launch_File)
   * [7] [ROS Enhancement Proposals](http://www.ros.org/reps/rep-0000.html)
