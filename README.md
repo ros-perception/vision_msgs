@@ -3,9 +3,9 @@
 ## Introduction
 
 This package is a proposed set of messages to unify computer
-vision and object detection efforts in ROS. Please feel free
-to provide feedback using GitHub's issues, or suggest changes
-or add functionality with a pull request.
+vision and object detection efforts in ROS. Please feel free to suggest
+specific changesor add functionality with a pull request, and also visit our
+[Discourse topic](https://discourse.ros.org/t/new-computer-vision-message-standards/1819) for discussion.
 
 ## Overview
 
