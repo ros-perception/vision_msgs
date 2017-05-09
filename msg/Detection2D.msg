@@ -5,11 +5,11 @@
 # to be located in the larger image.
 
 # non-geometric results of detection.
-Classification2D classification
+vision_msgs/Classification2D classification
 
 # The x/y position and (optional) rotation of the bounding box.
 geometry_msgs/Pose2D pose
 
-# The size of the bounding box surrounding the object. The center of the 
-# bounding box is the position of the detection point.
+# (Optional) The size of the bounding box surrounding the object. The center of
+# the bounding box is the position of the detection point.
 geometry_msgs/Vector2 bbox_size

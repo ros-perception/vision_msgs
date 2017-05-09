@@ -5,7 +5,7 @@
 # to be located in the larger image.
 
 # non-geometric class probability.
-Classification3D classification
+vision_msgs/Classification3D classification
 
 # The element's pose. This pose should be
 # defined as the pose of some fixed reference point on the object, such as the

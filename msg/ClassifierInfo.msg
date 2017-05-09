@@ -11,7 +11,7 @@
 Header header
 
 # Name of the classifier
-String method
+string method
 
 # ROS parameter name where the metadata database is stored in XML format.
 # The exact information stored in the database is left up to the user.
