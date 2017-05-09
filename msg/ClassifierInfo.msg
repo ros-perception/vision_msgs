@@ -15,7 +15,7 @@ string method
 
 # ROS parameter name where the metadata database is stored in XML format.
 # The exact information stored in the database is left up to the user.
-String database_param
+string database_param
 
 # locally-incremented metadata database version. This counter is incremented
 # each time the classifier responds to changes in the metadata database.

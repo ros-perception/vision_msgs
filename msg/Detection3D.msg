@@ -13,3 +13,6 @@ vision_msgs/Classification3D classification
 # Note that this pose is not stamped, but frame information can be provided by
 # setting classification.header.frame_id.
 geometry_msgs/Pose pose
+
+# (Optional) The bounding box in 3D space that surrounds the object.
+vision_msgs/BoundingBox3D bbox
