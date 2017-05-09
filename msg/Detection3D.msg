@@ -10,4 +10,6 @@ vision_msgs/Classification3D classification
 # The element's pose. This pose should be
 # defined as the pose of some fixed reference point on the object, such as the
 # geometric center of the bounding box or the center of mass of the object.
-geometry_msgs/PoseStamped pose
+# Note that this pose is not stamped, but frame information can be provided by
+# setting classification.header.frame_id.
+geometry_msgs/Pose pose

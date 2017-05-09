@@ -2,4 +2,4 @@
 
 # list of the detected proposals. For a multi-proposal detector, this list could
 # have many objects.
-vision_msgs/Detection3D[] results
+vision_msgs/Detection3D[] detections
