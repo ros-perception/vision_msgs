@@ -18,6 +18,9 @@ primary types of classifiers:
   2. **Detectors**, which identify class probabilities as well as the poses of
   those classes given a sensor input
 
+The class probabilities are stored with a CategoryDistribution message, which
+is essentially a map from integer IDs to floats.
+
 Message types exist separately for 2D (using `sensor_msgs/Image`) and 3D (using
 `sensor_msgs\PointCloud2`). The metadata that is stored for each object is
 application-specific, and so this package places very few constraints on the

@@ -48,14 +48,14 @@ find_package(catkin REQUIRED COMPONENTS
 # Generate messages in the 'msg' folder
 add_message_files(
   FILES
+  CategoryDistribution.msg
+  ClassifierInfo.msg
   Classification2D.msg
   Classification3D.msg
-  ClassifierInfo.msg
   Detection2D.msg
   Detection2DArray.msg
   Detection3D.msg
   Detection3DArray.msg
-  BoundingBox3D.msg
 )
 
 ## Generate services in the 'srv' folder

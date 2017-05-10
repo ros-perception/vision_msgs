@@ -4,8 +4,10 @@
 # allowing a classification result for a specific position in an image to
 # to be located in the larger image.
 
-# non-geometric class probability.
-vision_msgs/Classification3D classification
+Header header
+
+# Class probabilities
+CategoryDistribution results
 
 # The element's pose. This pose should be
 # defined as the pose of some fixed reference point on the object, such as the
@@ -14,5 +16,6 @@ vision_msgs/Classification3D classification
 # setting classification.header.frame_id.
 geometry_msgs/Pose pose
 
-# (Optional) The bounding box in 3D space that surrounds the object.
-vision_msgs/BoundingBox3D bbox
+# The 3D data that generated these results (i.e. region proposal cropped out of
+# the image). Not required for all detectors, so it may be empty.
+sensor_msgs/PointCloud2 source_cloud
