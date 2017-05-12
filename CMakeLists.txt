@@ -10,7 +10,8 @@ project(vision_msgs)
 find_package(catkin REQUIRED COMPONENTS
   std_msgs
   sensor_msgs
-  geometry_msgs)
+  geometry_msgs
+  message_generation)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -112,7 +113,7 @@ generate_messages(
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES vision_msgs
-#  CATKIN_DEPENDS other_catkin_pkg
+  CATKIN_DEPENDS std_msgs sensor_msgs geometry_msgs
 #  DEPENDS system_lib
 )
 
