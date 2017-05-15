@@ -49,7 +49,9 @@ find_package(catkin REQUIRED COMPONENTS
 # Generate messages in the 'msg' folder
 add_message_files(
   FILES
-  CategoryDistribution.msg
+  ObjectHypothesis.msg
+  ObjectHypothesis2D.msg
+  ObjectHypothesis3D.msg
   ClassifierInfo.msg
   Classification2D.msg
   Classification3D.msg
@@ -57,6 +59,9 @@ add_message_files(
   Detection2DArray.msg
   Detection3D.msg
   Detection3DArray.msg
+
+  BoundingBox2D.msg
+  BoundingBox3D.msg
 )
 
 ## Generate services in the 'srv' folder

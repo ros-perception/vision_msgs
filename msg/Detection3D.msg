@@ -6,15 +6,9 @@
 
 Header header
 
-# Class probabilities
-CategoryDistribution results
-
-# The element's pose. This pose should be
-# defined as the pose of some fixed reference point on the object, such as the
-# geometric center of the bounding box or the center of mass of the object.
-# Note that this pose is not stamped, but frame information can be provided by
-# setting classification.header.frame_id.
-geometry_msgs/Pose pose
+# Class probabilities. Does not have to include hypotheses for all possible
+# object ids, the scores for any ids not listed are assumed to be 0.
+vision_msgs/ObjectHypothesis3D[] results
 
 # The 3D data that generated these results (i.e. region proposal cropped out of
 # the image). Not required for all detectors, so it may be empty.

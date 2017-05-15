@@ -6,7 +6,7 @@
 Header header
 
 # Class probabilities
-CategoryDistribution results
+ObjectHypothesis[] results
 
 # The 3D data that generated these results (i.e. region proposal cropped out of
 # the image). Not required for all detectors, so it may be empty.
