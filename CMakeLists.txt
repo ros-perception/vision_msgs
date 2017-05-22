@@ -59,9 +59,7 @@ add_message_files(
   Detection2DArray.msg
   Detection3D.msg
   Detection3DArray.msg
-
-  BoundingBox2D.msg
-  BoundingBox3D.msg
+  BoundingBox.msg
 )
 
 ## Generate services in the 'srv' folder
