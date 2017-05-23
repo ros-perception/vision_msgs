@@ -8,7 +8,7 @@ Header header
 
 # Class probabilities. Does not have to include hypotheses for all possible
 # object ids, the scores for any ids not listed are assumed to be 0.
-vision_msgs/ObjectHypothesis3D[] results
+vision_msgs/ObjectHypothesisWithPose[] results
 
 # The 3D data that generated these results (i.e. region proposal cropped out of
 # the image). Not required for all detectors, so it may be empty.
