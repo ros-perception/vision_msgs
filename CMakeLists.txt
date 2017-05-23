@@ -50,8 +50,7 @@ find_package(catkin REQUIRED COMPONENTS
 add_message_files(
   FILES
   ObjectHypothesis.msg
-  ObjectHypothesis2D.msg
-  ObjectHypothesis3D.msg
+  ObjectHypothesisWithPose.msg
   ClassifierInfo.msg
   Classification2D.msg
   Classification3D.msg

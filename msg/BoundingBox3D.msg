@@ -1,7 +1,8 @@
 # Note: This message plans to move to geometry_msgs in the final implementation.
 
-# position and rotation of the bounding box
-geometry_msgs/Pose pose
+# The 3D position and orientation of the bounding box origin
+geometry_msgs/Pose origin
 
-# size of the bounding box
+# The size of the bounding box surrounding the object relative to the pose of 
+# its origin
 geometry_msgs/Vector3 size

@@ -1,9 +1,9 @@
 # Note: This message plans to move to geometry_msgs in the final implementation.
 
-# The x/y position and (optional) rotation of the bounding box center.
-geometry_msgs/Pose2D pose
+# The 2D position (in pixels) and orientation of the bounding box origin.
+geometry_msgs/Pose2D origin
 
-# (Optional) The size of the bounding box surrounding the object. The center of
-# the bounding box is the position of the pose.
-float32 bbox_size_x
-float32 bbox_size_y
+# The size (in pixels) of the bounding box surrounding the object relative 
+# to the pose of its origin
+uint32 size_x
+uint32 size_y
