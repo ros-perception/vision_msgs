@@ -10,6 +10,9 @@ Header header
 # object ids, the scores for any ids not listed are assumed to be 0.
 vision_msgs/ObjectHypothesis3D[] results
 
+# 3D bounding box surrounding the object.
+BoundingBox3D bbox
+
 # The 3D data that generated these results (i.e. region proposal cropped out of
 # the image). Not required for all detectors, so it may be empty.
 sensor_msgs/PointCloud2 source_cloud
