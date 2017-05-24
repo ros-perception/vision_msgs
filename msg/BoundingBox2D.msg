@@ -1,4 +1,5 @@
-# Note: This message plans to move to geometry_msgs in the final implementation.
+# Note: This message *DOES NOT* plan to move to geometry_msgs in the final
+# implementation, because it uses pixels, not meters.
 
 # The 2D position (in pixels) and orientation of the bounding box center.
 geometry_msgs/Pose2D center
