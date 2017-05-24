@@ -7,7 +7,7 @@
 Header header
 
 # Class probabilities
-vision_msgs/ObjectHypothesisWithPose[] results
+ObjectHypothesisWithPose[] results
 
 # 2D bounding box surrounding the object.
 BoundingBox2D bbox

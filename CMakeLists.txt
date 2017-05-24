@@ -49,18 +49,17 @@ find_package(catkin REQUIRED COMPONENTS
 # Generate messages in the 'msg' folder
 add_message_files(
   FILES
-  ObjectHypothesis.msg
-  ObjectHypothesisWithPose.msg
-  ClassifierInfo.msg
-  Classification2D.msg
-  Classification3D.msg
-  Detection2D.msg
-  Detection2DArray.msg
-  Detection3D.msg
-  Detection3DArray.msg
-
   BoundingBox2D.msg
   BoundingBox3D.msg
+  Classification2D.msg
+  Classification3D.msg
+  Detection2DArray.msg
+  Detection2D.msg
+  Detection3DArray.msg
+  Detection3D.msg
+  ObjectHypothesis.msg
+  ObjectHypothesisWithPose.msg
+  VisionInfo.msg
 )
 
 ## Generate services in the 'srv' folder
@@ -117,7 +116,7 @@ generate_messages(
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES vision_msgs
-  CATKIN_DEPENDS std_msgs sensor_msgs geometry_msgs
+  CATKIN_DEPENDS std_msgs sensor_msgs geometry_msgs message_runtime
 #  DEPENDS system_lib
 )
 
