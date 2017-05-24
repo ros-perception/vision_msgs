@@ -5,5 +5,5 @@ geometry_msgs/Pose2D center
 
 # The size (in pixels) of the bounding box surrounding the object relative 
 # to the pose of its center
-uint32 size_x
-uint32 size_y
+float size_x
+float size_y
