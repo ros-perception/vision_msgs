@@ -45,7 +45,7 @@ classifier information.
 
   * Classification2D and Classification3D: pure classification without pose
   * Detection2D and Detection3D: classification + pose
-  * ClassifierInfo: Information about a classifier, such as its name and where
+  * VisionInfo: Information about a classifier, such as its name and where
   to find its metadata database.
 
 By using a very general message definition, we hope to cover as many of the

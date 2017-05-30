@@ -8,7 +8,7 @@ Header header
 
 # Class probabilities. Does not have to include hypotheses for all possible
 # object ids, the scores for any ids not listed are assumed to be 0.
-vision_msgs/ObjectHypothesisWithPose[] results
+ObjectHypothesisWithPose[] results
 
 # 3D bounding box surrounding the object.
 BoundingBox3D bbox
