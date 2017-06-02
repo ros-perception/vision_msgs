@@ -1,13 +1,12 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.5)
 project(vision_msgs)
 
-find_package(catkin REQUIRED COMPONENTS
-  message_generation
-  std_msgs
-  sensor_msgs
-  geometry_msgs)
+find_package(std_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
 
-add_message_files(FILES
+set(msg_files
   BoundingBox2D.msg
   BoundingBox3D.msg
   Classification2D.msg
@@ -21,15 +20,7 @@ add_message_files(FILES
   VisionInfo.msg
 )
 
-generate_messages(DEPENDENCIES
-  std_msgs
-  sensor_msgs
-  geometry_msgs
-)
+rosidl_generate_interfaces(${PROJECT_NAME} ${msg_files})
+ament_export_dependencies(rosidl_default_runtime)
 
-catkin_package(CATKIN_DEPENDS
-  message_runtime
-  std_msgs
-  sensor_msgs
-  geometry_msgs
-)
+ament_package()
