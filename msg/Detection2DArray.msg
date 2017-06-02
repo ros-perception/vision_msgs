@@ -1,5 +1,5 @@
-# A list of 3D detections, for a multi-object 2D detector.
+# A list of 2D detections, for a multi-object 2D detector.
 
-# list of the detected proposals. For a multi-proposal detector, this list could
-# have many objects.
+# A list of the detected proposals. A multi-proposal detector might generate
+#   this list with many candidate detections generated from a single input.
 Detection2D[] detections
