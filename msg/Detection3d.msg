@@ -11,7 +11,7 @@ Header header
 ObjectHypothesisWithPose[] results
 
 # 3D bounding box surrounding the object.
-BoundingBox3D bbox
+BoundingBox3d bbox
 
 # The 3D data that generated these results (i.e. region proposal cropped out of
 # the image). Not required for all detectors, so it may be empty.
