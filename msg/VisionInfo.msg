@@ -10,7 +10,7 @@
 #   in a manner similar to CameraInfo.
 
 # Used for sequencing
-Header header
+std_msgs/Header header
 
 # Name of the vision pipeline. This should be a value that is meaningful to an
 #   outside user.

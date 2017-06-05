@@ -4,7 +4,7 @@
 #   allowing a classification result for a specific position in an image to
 #   to be located in the larger image.
 
-Header header
+std_msgs/Header header
 
 # Class probabilities. Does not have to include hypotheses for all possible
 #   object ids, the scores for any ids not listed are assumed to be 0.
