@@ -8,6 +8,7 @@ find_package(catkin REQUIRED COMPONENTS
   geometry_msgs)
 
 add_message_files(FILES
+  BoundingRect.msg
   BoundingBox2D.msg
   BoundingBox3D.msg
   Classification2D.msg
