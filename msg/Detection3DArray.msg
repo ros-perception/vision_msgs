@@ -1,5 +1,5 @@
 # A list of 3D detections, for a multi-object 3D detector.
 
-# list of the detected proposals. For a multi-proposal detector, this list could
-# have many objects.
-vision_msgs/Detection3D[] detections
+# A list of the detected proposals. A multi-proposal detector might generate
+#   this list with many candidate detections generated from a single input.
+Detection3D[] detections
