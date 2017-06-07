@@ -9,9 +9,8 @@ Header header
 # Class probabilities
 ObjectHypothesisWithPose[] results
 
-# A 2D bounding box surrounding the object, specified in the coordinates of the
-#   original input image.
-BoundingBox2D bbox
+# 2D bounding box surrounding the object.
+sensor_msgs/RegionOfInterest bbox
 
 # The 2D data that generated these results (i.e. region proposal cropped out of
 #   the image). Not required for all use cases, so it may be empty.
