@@ -4,8 +4,7 @@
   <version>1.0.0</version>
   <description>
     Messages for interfacing with various computer vision pipelines, such as
-    object
-    detectors.
+    object detectors.
   </description>
 
   <maintainer email="adam.d.allevato@gmail.com">Adam Allevato</maintainer>
