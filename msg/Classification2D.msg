@@ -7,6 +7,7 @@ Header header
 
 # A list of class probabilities. This list need not provide a probability for
 # every possible class, just ones that are nonzero, or above some user-defined
+# threshold.
 ObjectHypothesis[] results
 
 # The 2D data that generated these results (i.e. region proposal cropped out of
