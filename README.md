@@ -2,24 +2,22 @@
 
 ## Introduction
 
-This package is a proposed set of messages to unify computer
-vision and object detection efforts in ROS. Please feel free to suggest
-specific changes or add functionality with a pull request, and also visit our
-[Discourse topic](https://discourse.ros.org/t/new-computer-vision-message-standards/1819) for discussion.
+This package defines a set of messages to unify computer
+vision and object detection efforts in ROS.
 
 ## Overview
 
 The messages in this package are to define a common outward-facing interface
-for vision-based classifiers. The set of messages here are meant to enable 2
-primary types of classifiers:
+for vision-based pipelines. The set of messages here are meant to enable 2
+primary types of pipelines:
 
   1. **"Pure" Classifiers**, which identify class probabilities given a single
   sensor input
   2. **Detectors**, which identify class probabilities as well as the poses of
   those classes given a sensor input
 
-The class probabilities are stored with a CategoryDistribution message, which
-is essentially a map from integer IDs to floats.
+The class probabilities are stored with an array of ObjectHypothesis messages,
+which is essentially a map from integer IDs to float scores and poses.
 
 Message types exist separately for 2D (using `sensor_msgs/Image`) and 3D (using
 `sensor_msgs\PointCloud2`). The metadata that is stored for each object is
@@ -28,8 +26,9 @@ metadata. Each possible detection result must have a unique numerical ID so
 that it can be unambiguously and efficiently identified in the results messages.
 Object metadata such as name, mesh, etc. can then be looked up from a database.
 
-The only other requirement is that the metadata database can be stored in a
-ROS parameter. We expect a classifier to load the database to the parameter
+The only other requirement is that the metadata database information can be
+stored in a ROS parameter. We expect a classifier to load the database (or
+detailed database connection information) to the parameter
 server in a manner similar to how URDFs are loaded and stored there (see [6]),
 most likely defined in an XML format. This expectation may be further refined
 in the future using a ROS Enhancement Proposal, or REP [7].
@@ -45,8 +44,20 @@ classifier information.
 
   * Classification2D and Classification3D: pure classification without pose
   * Detection2D and Detection3D: classification + pose
+  * XArray messages, where X is one of the four message types listed above. A
+    pipeline should emit XArray messages as its forward-facing ROS interface.
   * VisionInfo: Information about a classifier, such as its name and where
-  to find its metadata database.
+    to find its metadata database.
+  * ObjectHypothesis: An id/score pair.
+  * ObjectHypothesisWithPose: An id/(score, pose) pair. This accounts for the
+    fact that a single input, say, a point cloud, could have different poses
+    depdending on its class. For example, a flat rectangular prism could either
+    be a smartphone lying on its back, or a book lying on its side.
+  * BoundingBox2D, BoundingBox3D: orientable rectangular bounding boxes,
+    specified by the pose of their center and their size.
+  * BoundingRect2D: A simplified bounding box that uses the OpenCV format:
+    definition of the upper-left corner, as well as width and height of the box.
+    The BoundingRect2D cannot be rotated.
 
 By using a very general message definition, we hope to cover as many of the
 various computer vision use cases as possible. Some examples of use cases that
@@ -60,6 +71,9 @@ can be fully represented are:
   in the Object Recognition Kitchen [4]
   * Custom detectors that use various point-cloud based features to predict
   object attributes (one example is [5])
+
+Please see the `vision_msgs_examples` repository for some sample vision
+pipelines that emit results using the `vision_msgs` format.
 
 ## References
   * [1] [YOLO](https://pjreddie.com/darknet/yolo/)
