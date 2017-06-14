@@ -15,8 +15,8 @@
 #ifndef VISION_MSGS_BUILD_BBOX_H_
 #define VISION_MSGS_BUILD_BBOX_H_
 
-#include "vision_msgs/BoundingBox2D.h"
-#include "vision_msgs/BoundingBox3D.h"
+#include "vision_msgs/msg/bounding_box2_d.hpp"
+#include "vision_msgs/msg/bounding_box3_d.hpp"
 
 namespace vision_msgs
 {
@@ -25,12 +25,12 @@ namespace vision_msgs
    * width, and height. This allows easy conversion from the OpenCV rectangle
    * representation.
    */
-  static inline BoundingBox2D createAABB2D(uint32_t left,
+  static inline msg::BoundingBox2D createAABB2D(uint32_t left,
                                            uint32_t top,
                                            uint32_t width,
                                            uint32_t height)
   {
-    BoundingBox2D bbox;
+    msg::BoundingBox2D bbox;
 
     bbox.center.x = left + width/2.0;
     bbox.center.y = top + height/2.0;
@@ -45,14 +45,14 @@ namespace vision_msgs
    * corner, width, height, and depth. This allows easy conversion from the
    * OpenCV rectangle representation.
    */
-  static inline BoundingBox3D createAABB3D(uint32_t min_x,
+  static inline msg::BoundingBox3D createAABB3D(uint32_t min_x,
                                            uint32_t min_y,
                                            uint32_t min_z,
                                            uint32_t size_x,
                                            uint32_t size_y,
                                            uint32_t size_z)
   {
-    BoundingBox3D bbox;
+    msg::BoundingBox3D bbox;
 
     bbox.center.position.x = min_x + size_x/2.0;
     bbox.center.position.y = min_y + size_y/2.0;
