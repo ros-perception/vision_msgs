@@ -1,13 +1,17 @@
 cmake_minimum_required(VERSION 3.5)
 project(vision_msgs)
 
+if(NOT WIN32)
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -Wall -Wextra -Wpedantic")
+endif()
+
+find_package(ament_cmake REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 set(msg_files
-  msg/BoundingRect.msg
   msg/BoundingBox2D.msg
   msg/BoundingBox3D.msg
   msg/Classification2D.msg
@@ -21,8 +25,21 @@ set(msg_files
   msg/VisionInfo.msg
 )
 
-rosidl_generate_interfaces(${PROJECT_NAME} ${msg_files}
-  DEPENDENCIES std_msgs geometry_msgs sensor_msgs)
-ament_export_dependencies(rosidl_default_runtime geometry_msgs sensor_msgs)
+rosidl_generate_interfaces(${PROJECT_NAME}
+  ${msg_files}
+  DEPENDENCIES std_msgs geometry_msgs sensor_msgs
+  ADD_LINTER_TESTS)
 
+install(DIRECTORY include/${PROJECT_NAME}/
+  DESTINATION include/${PROJECT_NAME}
+)
+
+if (BUILD_TESTING)
+  find_package(ament_lint_auto REQUIRED)
+
+  ament_lint_auto_find_test_dependencies()
+endif()
+
+ament_export_dependencies(rosidl_default_runtime)
+ament_export_include_directories(include)
 ament_package()
