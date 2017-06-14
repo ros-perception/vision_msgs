@@ -20,5 +20,9 @@
   <depend>sensor_msgs</depend>
   <depend>geometry_msgs</depend>
 
-  <export></export>
+  <test_depend>rosunit</test_depend>
+
+  <export>
+    <architecture_independent/>
+  </export>
 </package>

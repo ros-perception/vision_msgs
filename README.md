@@ -55,9 +55,6 @@ classifier information.
     be a smartphone lying on its back, or a book lying on its side.
   * BoundingBox2D, BoundingBox3D: orientable rectangular bounding boxes,
     specified by the pose of their center and their size.
-  * BoundingRect2D: A simplified bounding box that uses the OpenCV format:
-    definition of the upper-left corner, as well as width and height of the box.
-    The BoundingRect2D cannot be rotated.
 
 By using a very general message definition, we hope to cover as many of the
 various computer vision use cases as possible. Some examples of use cases that

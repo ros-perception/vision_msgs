@@ -7,8 +7,11 @@ find_package(catkin REQUIRED COMPONENTS
   sensor_msgs
   geometry_msgs)
 
-add_message_files(FILES
-  BoundingRect.msg
+include_directories(include)
+
+add_message_files(
+  DIRECTORY msg
+  FILES
   BoundingBox2D.msg
   BoundingBox3D.msg
   Classification2D.msg
@@ -34,3 +37,12 @@ catkin_package(CATKIN_DEPENDS
   sensor_msgs
   geometry_msgs
 )
+
+install(DIRECTORY include/${PROJECT_NAME}/
+  DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+  FILES_MATCHING PATTERN "*.h"
+)
+
+if (CATKIN_ENABLE_TESTING)
+  add_subdirectory(test)
+endif()
