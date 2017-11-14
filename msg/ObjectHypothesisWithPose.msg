@@ -16,4 +16,4 @@ float64 score
 #   messages.
 # Also note that different classes predicted
 #   for the same input data may have different predicted 6D poses.
-geometry_msgs/Pose pose
+geometry_msgs/PoseWithCovariance pose
