@@ -1,4 +1,4 @@
-# ROS Vision Messages Proposal
+# ROS Vision Messages
 
 ## Introduction
 
