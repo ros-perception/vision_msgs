@@ -21,11 +21,11 @@ string method
 #   and information is left up to the user.
 # The database should store information attached to numeric ids. Each
 #   numeric id should map to an atomic, visually recognizable element. This
-#   definition is intentionally vague to allow extreme flexibility. The elements
-#   could be classes in a pixel segmentation algorithm, object classes in a
-#   detector, different people's faces in a face detection algorithm, etc.
-#   Vision pipelines report results in terms of numeric IDs, which map into this
-#   database.
+#   definition is intentionally vague to allow extreme flexibility. The
+#   elements could be classes in a pixel segmentation algorithm, object classes
+#   in a detector, different people's faces in a face detection algorithm, etc.
+#   Vision pipelines report results in terms of numeric IDs, which map into
+#   this  database.
 # The information stored in this database is, again, left up to the user. The
 #   database could be as simple as a map from ID to class name, or it could
 #   include information such as object meshes or colors to use for

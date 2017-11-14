@@ -34,10 +34,10 @@ TEST(vision_msgs, CreateAABB3D)
   EXPECT_FLOAT_EQ(bbox.center.position.x, 3);   // 1 + 4/2
   EXPECT_FLOAT_EQ(bbox.center.position.y, 4.5); // 2 + 5/2
   EXPECT_FLOAT_EQ(bbox.center.position.z, 6);   // 3 + 6/2
-  EXPECT_EQ(bbox.center.orientation.x, 0);   // 3 + 6/2
-  EXPECT_EQ(bbox.center.orientation.y, 0);   // 3 + 6/2
-  EXPECT_EQ(bbox.center.orientation.z, 0);   // 3 + 6/2
-  EXPECT_EQ(bbox.center.orientation.w, 1);   // 3 + 6/2
+  EXPECT_EQ(bbox.center.orientation.x, 0);
+  EXPECT_EQ(bbox.center.orientation.y, 0);
+  EXPECT_EQ(bbox.center.orientation.z, 0);
+  EXPECT_EQ(bbox.center.orientation.w, 1);
   EXPECT_EQ(bbox.size.x, 4);
   EXPECT_EQ(bbox.size.y, 5);
   EXPECT_EQ(bbox.size.z, 6);
@@ -46,5 +46,5 @@ TEST(vision_msgs, CreateAABB3D)
 int main(int argc, char** argv)
 {
   ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
+  return RUN_ALL_TESTS();
 }
