@@ -17,3 +17,9 @@ BoundingBox3D bbox
 #   the image). This information is not required for all detectors, so it may
 #   be empty.
 sensor_msgs/PointCloud2 source_cloud
+
+# If this message was tracking result, this field set true.
+bool is_tracking
+
+# Unique ID which was set by tracker.
+uuid_msgs/UniqueID tracking_id

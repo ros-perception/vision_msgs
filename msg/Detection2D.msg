@@ -15,3 +15,9 @@ BoundingBox2D bbox
 # The 2D data that generated these results (i.e. region proposal cropped out of
 #   the image). Not required for all use cases, so it may be empty.
 sensor_msgs/Image source_img
+
+# If this message was tracking result, this field set true.
+bool is_tracking
+
+# Unique ID which was set by tracker.
+uuid_msgs/UniqueID tracking_id
