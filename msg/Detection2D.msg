@@ -16,8 +16,8 @@ BoundingBox2D bbox
 #   the image). Not required for all use cases, so it may be empty.
 sensor_msgs/Image source_img
 
-# If this message was tracking result, this field set true.
+# If true, this message contains object tracking information.
 bool is_tracking
 
-# Unique ID which was set by tracker.
+# ID used for consistency across multiple detection messages.
 uuid_msgs/UniqueID tracking_id
