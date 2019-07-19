@@ -20,4 +20,5 @@ sensor_msgs/Image source_img
 bool is_tracking
 
 # ID used for consistency across multiple detection messages.
-uuid_msgs/UniqueID tracking_id
+string tracking_id
+

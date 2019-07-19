@@ -19,7 +19,6 @@
   <depend>std_msgs</depend>
   <depend>sensor_msgs</depend>
   <depend>geometry_msgs</depend>
-  <depend>uuid_msgs</depend>
 
   <test_depend>rosunit</test_depend>
 

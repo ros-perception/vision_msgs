@@ -22,4 +22,5 @@ sensor_msgs/PointCloud2 source_cloud
 bool is_tracking
 
 # Unique ID which was set by tracker.
-uuid_msgs/UniqueID tracking_id
+string tracking_id
+
