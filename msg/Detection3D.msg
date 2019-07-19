@@ -21,6 +21,7 @@ sensor_msgs/PointCloud2 source_cloud
 # If this message was tracking result, this field set true.
 bool is_tracking
 
-# Unique ID which was set by tracker.
+# ID used for consistency across multiple detection messages. This value will
+#   likely differ from the id field set in each individual ObjectHypothesis.
+# If you set this field, be sure to also set is_tracking to True.
 string tracking_id
-
