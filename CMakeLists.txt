@@ -16,12 +16,12 @@ add_message_files(
   BoundingBox3D.msg
   Classification2D.msg
   Classification3D.msg
-  CompressedDetection2DArray.msg
-  CompressedDetection2D.msg
-  Detection2DArray.msg
   Detection2D.msg
-  Detection3DArray.msg
+  Detection2DArray.msg
+  Detection2DWithCompression.msg
+  Detection2DWithCompressionArray.msg
   Detection3D.msg
+  Detection3DArray.msg
   ObjectHypothesis.msg
   ObjectHypothesisWithPose.msg
   VisionInfo.msg

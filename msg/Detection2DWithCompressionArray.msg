@@ -4,4 +4,4 @@ Header header
 
 # A list of the detected proposals. A multi-proposal detector might generate
 #   this list with many candidate detections generated from a single input.
-CompressedDetection2D[] detections
+Detection2DWithCompression[] detections
