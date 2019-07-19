@@ -1,4 +1,4 @@
-# Defines a 2D detection result.
+# Defines a 2D detection result using compressed image data.
 #
 # This is similar to a 2D classification, but includes position information,
 #   allowing a classification result for a specific crop or image point to
