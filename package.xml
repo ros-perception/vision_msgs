@@ -9,16 +9,17 @@
 
   <author email="adam.d.allevato@gmail.com">Adam Allevato</author>
   <maintainer email="adam.d.allevato@gmail.com">Adam Allevato</maintainer>
-
   <license>Apache License 2.0</license>
 
   <buildtool_depend>catkin</buildtool_depend>
 
-  <depend>message_generation</depend>
-  <depend>message_runtime</depend>
+  <build_depend>message_generation</build_depend>
+
   <depend>std_msgs</depend>
   <depend>sensor_msgs</depend>
   <depend>geometry_msgs</depend>
+
+  <exec_depend>message_runtime</exec_depend>
 
   <test_depend>rosunit</test_depend>
 
