@@ -14,6 +14,7 @@ add_message_files(
   FILES
   BoundingBox2D.msg
   BoundingBox3D.msg
+  BoundingBox3DArray.msg
   Classification2D.msg
   Classification3D.msg
   Detection2DArray.msg
