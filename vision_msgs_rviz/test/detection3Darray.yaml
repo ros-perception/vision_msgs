@@ -1,0 +1,350 @@
+header: 
+  seq: 0
+  stamp: 
+    secs: 0
+    nsecs: 0
+  frame_id: 'xtion_rgb_optical_frame'
+detections: 
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 0
+        nsecs:         0
+      frame_id: "xtion_rgb_optical_frame"
+    is_tracking: false
+    results: 
+      - 
+        id: "6"
+        score: 0.212292090058
+        pose: 
+          pose: 
+            position: 
+              x: 0.0
+              y: 0.0
+              z: 0.0
+            orientation: 
+              x: 0.0
+              y: 0.0
+              z: 0.0
+              w: 0.0
+          covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+      - 
+        id: "3"
+        score: 0.137890741229
+        pose: 
+          pose: 
+            position: 
+              x: 0.0
+              y: 0.0
+              z: 0.0
+            orientation: 
+              x: 0.0
+              y: 0.0
+              z: 0.0
+              w: 0.0
+          covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+      - 
+        id: "0"
+        score: 0.0983046963811
+        pose: 
+          pose: 
+            position: 
+              x: 0.0
+              y: 0.0
+              z: 0.0
+            orientation: 
+              x: 0.0
+              y: 0.0
+              z: 0.0
+              w: 0.0
+          covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+      - 
+        id: "1"
+        score: 0.0955609679222
+        pose: 
+          pose: 
+            position: 
+              x: 0.0
+              y: 0.0
+              z: 0.0
+            orientation: 
+              x: 0.0
+              y: 0.0
+              z: 0.0
+              w: 0.0
+          covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    bbox: 
+      center: 
+        position: 
+          x: -0.0975558981299
+          y: 0.0807498693466
+          z: 0.578040897846
+        orientation: 
+          x: -0.293688118458
+          y: -0.320480018854
+          z: -0.610862851143
+          w: 0.661729812622
+      size: 
+        x: 0.147710978985
+        y: 0.0720850974321
+        z: 0.0187380220741
+    source_cloud: 
+      header: 
+        seq: 0
+        stamp: 
+          secs: 0
+          nsecs:         0
+        frame_id: "xtion_rgb_optical_frame"
+      height: 1
+      width: 3878
+      fields: 
+        - 
+          name: "x"
+          offset: 0
+          datatype: 7
+          count: 1
+        - 
+          name: "y"
+          offset: 4
+          datatype: 7
+          count: 1
+        - 
+          name: "z"
+          offset: 8
+          datatype: 7
+          count: 1
+      is_bigendian: False
+      point_step: 16
+      row_step: 62048
+      data: []
+      is_dense: True
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 0
+        nsecs:         0
+      frame_id: "xtion_rgb_optical_frame"
+    is_tracking: false
+    results: 
+      - 
+        id: "0"
+        score: 0.372875422239
+        pose: 
+          pose: 
+            position: 
+              x: 0.0
+              y: 0.0
+              z: 0.0
+            orientation: 
+              x: 0.0
+              y: 0.0
+              z: 0.0
+              w: 0.0
+          covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+      - 
+        id: "3"
+        score: 0.232879549265
+        pose: 
+          pose: 
+            position: 
+              x: 0.0
+              y: 0.0
+              z: 0.0
+            orientation: 
+              x: 0.0
+              y: 0.0
+              z: 0.0
+              w: 0.0
+          covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+      - 
+        id: "10"
+        score: 0.112622506917
+        pose: 
+          pose: 
+            position: 
+              x: 0.0
+              y: 0.0
+              z: 0.0
+            orientation: 
+              x: 0.0
+              y: 0.0
+              z: 0.0
+              w: 0.0
+          covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+      - 
+        id: "1"
+        score: 0.0795375034213
+        pose: 
+          pose: 
+            position: 
+              x: 0.0
+              y: 0.0
+              z: 0.0
+            orientation: 
+              x: 0.0
+              y: 0.0
+              z: 0.0
+              w: 0.0
+          covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    bbox: 
+      center: 
+        position: 
+          x: 0.168955057859
+          y: 0.205887660384
+          z: 0.6400000453
+        orientation: 
+          x: 0.0
+          y: 0.0
+          z: 0.0
+          w: 1.0
+      size: 
+        x: 0.0673655122519
+        y: 0.0575758814812
+        z: 0.0520000457764
+    source_cloud: 
+      header: 
+        seq: 0
+        stamp: 
+          secs: 0
+          nsecs:         0
+        frame_id: "xtion_rgb_optical_frame"
+      height: 1
+      width: 2316
+      fields: 
+        - 
+          name: "x"
+          offset: 0
+          datatype: 7
+          count: 1
+        - 
+          name: "y"
+          offset: 4
+          datatype: 7
+          count: 1
+        - 
+          name: "z"
+          offset: 8
+          datatype: 7
+          count: 1
+      is_bigendian: False
+      point_step: 16
+      row_step: 37056
+      data: []
+      is_dense: True
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 0
+        nsecs:         0
+      frame_id: "xtion_rgb_optical_frame"
+    is_tracking: true
+    tracking_id: "foo"
+    results: 
+      - 
+        id: "3"
+        score: 0.188430324197
+        pose: 
+          pose: 
+            position: 
+              x: 0.0
+              y: 0.0
+              z: 0.0
+            orientation: 
+              x: 0.0
+              y: 0.0
+              z: 0.0
+              w: 0.0
+          covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+      - 
+        id: "0"
+        score: 0.104173906147
+        pose: 
+          pose: 
+            position: 
+              x: 0.0
+              y: 0.0
+              z: 0.0
+            orientation: 
+              x: 0.0
+              y: 0.0
+              z: 0.0
+              w: 0.0
+          covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+      - 
+        id: "8"
+        score: 0.0977270677686
+        pose: 
+          pose: 
+            position: 
+              x: 0.0
+              y: 0.0
+              z: 0.0
+            orientation: 
+              x: 0.0
+              y: 0.0
+              z: 0.0
+              w: 0.0
+          covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+      - 
+        id: "1"
+        score: 0.087945304811
+        pose: 
+          pose: 
+            position: 
+              x: 0.0
+              y: 0.0
+              z: 0.0
+            orientation: 
+              x: 0.0
+              y: 0.0
+              z: 0.0
+              w: 0.0
+          covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    bbox: 
+      center: 
+        position: 
+          x: 0.380071222782
+          y: 0.0550561025739
+          z: 0.811000108719
+        orientation: 
+          x: 0.5
+          y: 0.5
+          z: 0.5
+          w: 0.5
+      size: 
+        x: 0.068350225687
+        y: 0.0600000023842
+        z: 0.0278297662735
+    source_cloud: 
+      header: 
+        seq: 0
+        stamp: 
+          secs: 0
+          nsecs:         0
+        frame_id: "xtion_rgb_optical_frame"
+      height: 1
+      width: 613
+      fields: 
+        - 
+          name: "x"
+          offset: 0
+          datatype: 7
+          count: 1
+        - 
+          name: "y"
+          offset: 4
+          datatype: 7
+          count: 1
+        - 
+          name: "z"
+          offset: 8
+          datatype: 7
+          count: 1
+      is_bigendian: False
+      point_step: 16
+      row_step: 9808
+      data: []
+      is_dense: True

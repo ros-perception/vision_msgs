@@ -1,0 +1,23 @@
+<library path="lib/libvision_msgs_rviz">
+
+  <!--class name="vision_msgs_rviz/BoundingBoxes"
+         type="rviz::BoundingBoxArrayDisplay"
+         base_class_type="rviz::Display">
+    <description>
+      Displays data from clf_object_recognition_msgs/BoundingBox3DArray messages.
+    </description>
+    <message_type>clf_object_recognition_msgs/BoundingBox3DArray</message_type>
+  </class-->
+
+  <class name="vision_msgs_rviz/Detections3D"
+         type="rviz::Detection3DArrayDisplay"
+         base_class_type="rviz::Display">
+    <description>
+      Displays data from vision_msgs/Detection3DArray messages.
+    </description>
+    <message_type>vision_msgs/Detection3DArray</message_type>
+  </class>
+
+  
+  
+</library>
