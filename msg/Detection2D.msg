@@ -4,7 +4,7 @@
 #   allowing a classification result for a specific crop or image point to
 #   to be located in the larger image.
 
-Header header
+std_msgs/Header header
 
 # Class probabilities
 ObjectHypothesisWithPose[] results

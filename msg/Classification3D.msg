@@ -3,7 +3,7 @@
 # This result does not contain any position information. It is designed for
 #   classifiers, which simply provide probabilities given a source image.
 
-Header header
+std_msgs/Header header
 
 # Class probabilities
 ObjectHypothesis[] results

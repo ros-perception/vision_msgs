@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
-<package format="2">
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
   <name>vision_msgs</name>
-  <version>0.0.1</version>
+  <version>0.1.1</version>
   <description>
     Messages for interfacing with various computer vision pipelines, such as
     object detectors.
@@ -11,19 +12,21 @@
   <maintainer email="adam.d.allevato@gmail.com">Adam Allevato</maintainer>
   <license>Apache License 2.0</license>
 
-  <buildtool_depend>catkin</buildtool_depend>
-
-  <build_depend>message_generation</build_depend>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>ament_cmake_gtest</buildtool_depend>
+  <buildtool_depend>rosidl_default_generators</buildtool_depend>
 
   <depend>std_msgs</depend>
   <depend>sensor_msgs</depend>
   <depend>geometry_msgs</depend>
 
-  <exec_depend>message_runtime</exec_depend>
+  <exec_depend>rosidl_default_runtime</exec_depend>
 
-  <test_depend>rosunit</test_depend>
+  <test_depend>ament_cmake_lint_cmake</test_depend>
+
+  <member_of_group>rosidl_interface_packages</member_of_group>
 
   <export>
-    <architecture_independent/>
+    <build_type>ament_cmake</build_type>
   </export>
 </package>

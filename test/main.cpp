@@ -14,13 +14,11 @@
 
 #include <gtest/gtest.h>
 
-#include "vision_msgs/BoundingBox2D.h"
-#include "vision_msgs/BoundingBox3D.h"
 #include "vision_msgs/create_aabb.h"
 
 TEST(vision_msgs, CreateAABB2D)
 {
-  vision_msgs::BoundingBox2D bbox = vision_msgs::createAABB2D(1,2,3,4);
+  vision_msgs::msg::BoundingBox2D bbox = vision_msgs::createAABB2D(1,2,3,4);
   EXPECT_FLOAT_EQ(bbox.center.x, 2.5);  // 1 + 3/2
   EXPECT_FLOAT_EQ(bbox.center.y, 4);    // 2 + 4/2
   EXPECT_EQ(bbox.size_x, 3);
@@ -30,7 +28,7 @@ TEST(vision_msgs, CreateAABB2D)
 
 TEST(vision_msgs, CreateAABB3D)
 {
-  vision_msgs::BoundingBox3D bbox = vision_msgs::createAABB3D(1,2,3,4,5,6);
+  vision_msgs::msg::BoundingBox3D bbox = vision_msgs::createAABB3D(1,2,3,4,5,6);
   EXPECT_FLOAT_EQ(bbox.center.position.x, 3);   // 1 + 4/2
   EXPECT_FLOAT_EQ(bbox.center.position.y, 4.5); // 2 + 5/2
   EXPECT_FLOAT_EQ(bbox.center.position.z, 6);   // 3 + 6/2
