@@ -19,8 +19,8 @@ string method
 # Location where the metadata database is stored. The recommended location is
 #   as an XML string on the ROS parameter server, but the exact implementation
 #   and information is left up to the user.
-# The database should store information attached to class ids. Each
-#   class id should map to an atomic, visually recognizable element. This
+# The database should store information attached to numeric ids. Each
+#   numeric id should map to an atomic, visually recognizable element. This
 #   definition is intentionally vague to allow extreme flexibility. The
 #   elements could be classes in a pixel segmentation algorithm, object classes
 #   in a detector, different people's faces in a face detection algorithm, etc.
