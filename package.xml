@@ -12,6 +12,8 @@
   <license>Apache License 2.0</license>
 
   <author email="adam.d.allevato@gmail.com">Adam Allevato</author>
+  <maintainer email="adam.d.allevato@gmail.com">Adam Allevato</maintainer>
+  <license>Apache License 2.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
   <buildtool_depend>rosidl_default_generators</buildtool_depend>
