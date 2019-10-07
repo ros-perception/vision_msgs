@@ -38,6 +38,19 @@ if (BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
 
   ament_lint_auto_find_test_dependencies()
+
+  ament_add_gtest(vision_msgs_test test/main.cpp)
+  add_dependencies(vision_msgs_test ${PROJECT_NAME})
+  ament_target_dependencies(vision_msgs_test
+    geometry_msgs
+    std_msgs
+    sensor_msgs
+  )
+  # TODO(sloretz) rosidl_generate_interfaces() should make using generated messages in same project simpler
+  target_include_directories(vision_msgs_test PUBLIC
+    include
+    ${CMAKE_CURRENT_BINARY_DIR}/rosidl_generator_cpp
+  )
 endif()
 
 ament_export_dependencies(rosidl_default_runtime)

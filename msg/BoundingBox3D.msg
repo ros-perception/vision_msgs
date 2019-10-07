@@ -5,5 +5,6 @@
 # The 3D position and orientation of the bounding box center
 geometry_msgs/Pose center
 
-# The size of the bounding box, in meters, surrounding the object's center pose.
+# The size of the bounding box, in meters, surrounding the object's center
+#   pose.
 geometry_msgs/Vector3 size
