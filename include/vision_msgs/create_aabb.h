@@ -12,58 +12,60 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#ifndef VISION_MSGS_BUILD_BBOX_H_
-#define VISION_MSGS_BUILD_BBOX_H_
+#ifndef VISION_MSGS__CREATE_AABB_H_
+#define VISION_MSGS__CREATE_AABB_H_
 
 #include "vision_msgs/msg/bounding_box2_d.hpp"
 #include "vision_msgs/msg/bounding_box3_d.hpp"
 
 namespace vision_msgs
 {
-  /**
-   * Create an axis-aligned bounding box (AABB) given the upper-left corner,
-   * width, and height. This allows easy conversion from the OpenCV rectangle
-   * representation.
-   */
-  static inline msg::BoundingBox2D createAABB2D(uint32_t left,
-                                           uint32_t top,
-                                           uint32_t width,
-                                           uint32_t height)
-  {
-    msg::BoundingBox2D bbox;
+/**
+ * Create an axis-aligned bounding box (AABB) given the upper-left corner,
+ * width, and height. This allows easy conversion from the OpenCV rectangle
+ * representation.
+ */
+static inline msg::BoundingBox2D createAABB2D(
+  uint32_t left,
+  uint32_t top,
+  uint32_t width,
+  uint32_t height)
+{
+  msg::BoundingBox2D bbox;
 
-    bbox.center.x = left + width/2.0;
-    bbox.center.y = top + height/2.0;
-    bbox.size_x = width;
-    bbox.size_y = height;
+  bbox.center.x = left + width / 2.0;
+  bbox.center.y = top + height / 2.0;
+  bbox.size_x = width;
+  bbox.size_y = height;
 
-    return bbox;
-  }
-
-  /**
-   * Create an axis-aligned bounding box (AABB) given the upper-left-front
-   * corner, width, height, and depth. This allows easy conversion from the
-   * OpenCV rectangle representation.
-   */
-  static inline msg::BoundingBox3D createAABB3D(uint32_t min_x,
-                                           uint32_t min_y,
-                                           uint32_t min_z,
-                                           uint32_t size_x,
-                                           uint32_t size_y,
-                                           uint32_t size_z)
-  {
-    msg::BoundingBox3D bbox;
-
-    bbox.center.position.x = min_x + size_x/2.0;
-    bbox.center.position.y = min_y + size_y/2.0;
-    bbox.center.position.z = min_z + size_z/2.0;
-    bbox.center.orientation.w = 1;
-    bbox.size.x = size_x;
-    bbox.size.y = size_y;
-    bbox.size.z = size_z;
-
-    return bbox;
-  }
+  return bbox;
 }
 
-#endif
+/**
+ * Create an axis-aligned bounding box (AABB) given the upper-left-front
+ * corner, width, height, and depth. This allows easy conversion from the
+ * OpenCV rectangle representation.
+ */
+static inline msg::BoundingBox3D createAABB3D(
+  uint32_t min_x,
+  uint32_t min_y,
+  uint32_t min_z,
+  uint32_t size_x,
+  uint32_t size_y,
+  uint32_t size_z)
+{
+  msg::BoundingBox3D bbox;
+
+  bbox.center.position.x = min_x + size_x / 2.0;
+  bbox.center.position.y = min_y + size_y / 2.0;
+  bbox.center.position.z = min_z + size_z / 2.0;
+  bbox.center.orientation.w = 1;
+  bbox.size.x = size_x;
+  bbox.size.y = size_y;
+  bbox.size.z = size_z;
+
+  return bbox;
+}
+}  // namespace vision_msgs
+
+#endif  // VISION_MSGS__CREATE_AABB_H_
