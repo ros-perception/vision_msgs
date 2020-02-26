@@ -16,7 +16,7 @@
 
 #include "vision_msgs/msg/bounding_box2_d.hpp"
 #include "vision_msgs/msg/bounding_box3_d.hpp"
-#include "vision_msgs/create_aabb.h"
+#include "vision_msgs/create_aabb.hpp"
 
 TEST(vision_msgs, CreateAABB2D)
 {
