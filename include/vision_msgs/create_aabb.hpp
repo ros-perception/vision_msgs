@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#ifndef VISION_MSGS__CREATE_AABB_H_
-#define VISION_MSGS__CREATE_AABB_H_
+#ifndef VISION_MSGS__CREATE_AABB_HPP_
+#define VISION_MSGS__CREATE_AABB_HPP_
 
 #include "vision_msgs/msg/bounding_box2_d.hpp"
 #include "vision_msgs/msg/bounding_box3_d.hpp"
@@ -68,4 +68,4 @@ static inline msg::BoundingBox3D createAABB3D(
 }
 }  // namespace vision_msgs
 
-#endif  // VISION_MSGS__CREATE_AABB_H_
+#endif  // VISION_MSGS__CREATE_AABB_HPP_
