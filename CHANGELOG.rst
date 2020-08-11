@@ -2,8 +2,8 @@
 Changelog for package vision_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.0.0 (2020-08-11)
+------------------
 * Fix lint error for draconian header guard rule
 * Rename create_aabb to use C++ extension
   This fixes linting errors which assume that .h means that a file
