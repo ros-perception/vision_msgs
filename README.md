@@ -69,7 +69,7 @@ can be fully represented are:
   * Custom detectors that use various point-cloud based features to predict
   object attributes (one example is [5])
 
-Please see the `vision_msgs_examples` repository for some sample vision
+Please see the [`vision_msgs_examples`](https://github.com/Kukanani/vision_msgs_examples) repository for some sample vision
 pipelines that emit results using the `vision_msgs` format.
 
 ## References
