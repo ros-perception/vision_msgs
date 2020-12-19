@@ -49,7 +49,7 @@ classifier information.
   * VisionInfo: Information about a classifier, such as its name and where
     to find its metadata database.
   * ObjectHypothesis: An id/score pair.
-  * ObjectHypothesisWithPose: An id/(score, pose) pair. This accounts for the
+  * ObjectHypothesisWithPose: An ObjectHypothesis/pose pair. This accounts for the
     fact that a single input, say, a point cloud, could have different poses
     depdending on its class. For example, a flat rectangular prism could either
     be a smartphone lying on its back, or a book lying on its side.

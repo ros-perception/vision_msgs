@@ -1,4 +1,4 @@
-# An object hypothesis that contains no position information.
+# An object hypothesis that contains no pose information.
 
 # The unique ID of the object class. To get additional information about
 #   this ID, such as its human-readable class name, listeners should perform a
