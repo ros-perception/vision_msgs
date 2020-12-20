@@ -1,4 +1,6 @@
 # An object hypothesis that contains pose information.
+# If you would like to define an array of ObjectHypothesisWithPose messages,
+#   please see the Detection2D or Detection3D message types.
 
 # The object hypothesis (ID and score).
 ObjectHypothesis hypothesis
