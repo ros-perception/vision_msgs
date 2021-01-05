@@ -5,7 +5,6 @@
 # The 3D position and orientation of the bounding box center
 geometry_msgs/Pose center
 
-# The total size (in meters) of the bounding box surrounding the
-# object. The X and Y axes are relative to the center pose 
-# (including orientation).
+# The total size of the bounding box, in meters, surrounding the object's center
+#   pose.
 geometry_msgs/Vector3 size
