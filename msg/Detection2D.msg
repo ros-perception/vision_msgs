@@ -16,6 +16,7 @@ BoundingBox2D bbox
 #   the image). Not required for all use cases, so it may be empty.
 sensor_msgs/Image source_img
 
-# ID used for consistency across multiple detection messages. This value will
-#   likely differ from the id field set in each individual ObjectHypothesis.
-string tracking_id
+# ID used for consistency across multiple detection messages. Detections
+# of the same object in different detection messages should have the same id.
+# This field may be empty.
+string id
