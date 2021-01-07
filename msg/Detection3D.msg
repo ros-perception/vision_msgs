@@ -18,6 +18,7 @@ BoundingBox3D bbox
 #   be empty.
 sensor_msgs/PointCloud2 source_cloud
 
-# ID used for consistency across multiple detection messages. This value will
-#   likely differ from the id field set in each individual ObjectHypothesis.
-string tracking_id
+# ID used for consistency across multiple detection messages. Detections
+# of the same object in different detection messages should have the same id.
+# This field may be empty.
+string id
