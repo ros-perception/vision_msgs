@@ -12,11 +12,12 @@ ObjectHypothesisWithPose[] results
 # 2D bounding box surrounding the object.
 BoundingBox2D bbox
 
-# The 2D data that generated these results (i.e. region proposal cropped out of
-#   the image). Not required for all use cases, so it may be empty.
-sensor_msgs/Image source_img
-
 # ID used for consistency across multiple detection messages. Detections
 # of the same object in different detection messages should have the same id.
 # This field may be empty.
 string id
+
+# Source data that generated this detection are not a part of the message.
+# If you need to access them, use an exact or approximate time synchronizer in
+# your code, as this message's header should match the header of the source
+# data.

@@ -8,14 +8,12 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
-find_package(sensor_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 set(msg_files
   msg/BoundingBox2D.msg
   msg/BoundingBox3D.msg
-  msg/Classification2D.msg
-  msg/Classification3D.msg
+  msg/Classification.msg
   msg/Detection2DArray.msg
   msg/Detection2D.msg
   msg/Detection3DArray.msg
@@ -27,7 +25,7 @@ set(msg_files
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${msg_files}
-  DEPENDENCIES std_msgs geometry_msgs sensor_msgs
+  DEPENDENCIES std_msgs geometry_msgs
   ADD_LINTER_TESTS)
 
 install(DIRECTORY include/${PROJECT_NAME}/
@@ -44,7 +42,6 @@ if(BUILD_TESTING)
   ament_target_dependencies(vision_msgs_test
     geometry_msgs
     std_msgs
-    sensor_msgs
   )
   # TODO(sloretz) rosidl_generate_interfaces() should make using generated messages in same project simpler
   target_include_directories(vision_msgs_test PUBLIC

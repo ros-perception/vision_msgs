@@ -19,12 +19,12 @@ primary types of pipelines:
 The class probabilities are stored with an array of ObjectHypothesis messages,
 which is essentially a map from integer IDs to float scores and poses.
 
-Message types exist separately for 2D (using `sensor_msgs/Image`) and 3D (using
-`sensor_msgs\PointCloud2`). The metadata that is stored for each object is
-application-specific, and so this package places very few constraints on the
-metadata. Each possible detection result must have a unique numerical ID so
-that it can be unambiguously and efficiently identified in the results messages.
-Object metadata such as name, mesh, etc. can then be looked up from a database.
+Message types exist separately for 2D and 3D. The metadata that is stored for
+each object is application-specific, and so this package places very few
+constraints on the metadata. Each possible detection result must have a unique
+numerical ID so that it can be unambiguously and efficiently identified in the
+results messages. Object metadata such as name, mesh, etc. can then be looked
+up from a database.
 
 The only other requirement is that the metadata database information can be
 stored in a ROS parameter. We expect a classifier to load the database (or
@@ -40,24 +40,28 @@ can publish messages to a topic signaling that the database has been updated, as
 well as incrementing a database version that's continually published with the
 classifier information.
 
+Source data that generated a classification or detection are not a part of the
+messages. If you need to access them, use an
+[exact or approximate time synchronizer](
+http://wiki.ros.org/message_filters#Policy-Based_Synchronizer_.5BROS_1.1.2B-.5D)
+in your code, as the message's header should match the header of the source
+data.
+
 ## Messages
 
-  * Classification2D and Classification3D: pure classification without pose
+  * Classification: pure classification without pose
   * Detection2D and Detection3D: classification + pose
-  * XArray messages, where X is one of the four message types listed above. A
+  * XArray messages, where X is one of the two message types listed above. A
     pipeline should emit XArray messages as its forward-facing ROS interface.
   * VisionInfo: Information about a classifier, such as its name and where
     to find its metadata database.
-  * ObjectHypothesis: An id/score pair.
+  * ObjectHypothesis: An class\_id/score pair.
   * ObjectHypothesisWithPose: An ObjectHypothesis/pose pair. This accounts for the
     fact that a single input, say, a point cloud, could have different poses
     depdending on its class. For example, a flat rectangular prism could either
     be a smartphone lying on its back, or a book lying on its side.
   * BoundingBox2D, BoundingBox3D: orientable rectangular bounding boxes,
     specified by the pose of their center and their size.
-  * BoundingRect2D: A simplified bounding box that uses the OpenCV format:
-    definition of the upper-left corner, as well as width and height of the box.
-    The BoundingRect2D cannot be rotated.
 
 By using a very general message definition, we hope to cover as many of the
 various computer vision use cases as possible. Some examples of use cases that
