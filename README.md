@@ -40,6 +40,13 @@ can publish messages to a topic signaling that the database has been updated, as
 well as incrementing a database version that's continually published with the
 classifier information.
 
+Source data that generated a classification or detection are not a part of the
+messages. If you need to access them, use an
+[exact or approximate time synchronizer](
+http://wiki.ros.org/message_filters#Policy-Based_Synchronizer_.5BROS_1.1.2B-.5D)
+in your code, as the message's header should match the header of the source
+data.
+
 ## Messages
 
   * Classification: pure classification without pose

@@ -1,7 +1,7 @@
 # Defines a 3D detection result.
 #
-# This extends a basic 3D classification by including position information,
-#   allowing a classification result for a specific position in data.
+# This extends a basic 3D classification by including the pose of the
+# detected object.
 
 std_msgs/Header header
 
