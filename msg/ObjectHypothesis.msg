@@ -1,6 +1,6 @@
 # An object hypothesis that contains no pose information.
 # If you would like to define an array of ObjectHypothesis messages,
-#   please see the Classification2D or Classification3D message types.
+#   please see the Classification message type.
 
 # The unique ID of the object class. To get additional information about
 #   this ID, such as its human-readable class name, listeners should perform a
