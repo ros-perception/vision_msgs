@@ -2,8 +2,8 @@
 Changelog for package vision_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+3.0.0 (2021-04-13)
+------------------
 * Add license snippet in CONTRIBUTING.md
 * Decouple source data from the detection/classification messages. (`#53 <https://github.com/ros-perception/vision_msgs/issues/53>`_)
   * Decouple source data from the detection/classification messages.
