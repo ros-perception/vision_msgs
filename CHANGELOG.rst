@@ -2,6 +2,35 @@
 Changelog for package vision_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add license snippet in CONTRIBUTING.md
+* Decouple source data from the detection/classification messages. (`#53 <https://github.com/ros-perception/vision_msgs/issues/53>`_)
+  * Decouple source data from the detection/classification messages.
+  This commit drops dependency on sensor_msgs
+  * Improved documentation.
+* Merge pull request `#52 <https://github.com/ros-perception/vision_msgs/issues/52>`_ from mintar/clarify-class-object-id
+  Rename tracking_id -> id, id -> class_id
+* Rename DetectionXD.tracking_id -> id
+* Rename ObjectHypothesis.id -> class_id
+* Merge pull request `#51 <https://github.com/ros-perception/vision_msgs/issues/51>`_ from ros-perception/clarify-bbox-size
+  Clarify comment for size fields in bounding box messages
+* Revert confusing comment about bbox orientation
+* Merge pull request `#50 <https://github.com/ros-perception/vision_msgs/issues/50>`_ from ros-perception/remove-is-tracking-field
+  Remove is_tracking field
+* Remove other mentions to is_tracking field
+* Clarify bbox size comment
+* Remove tracking_id from Detection3D as well
+* Remove is_tracking field
+  This field does not seem useful, and we are not aware of anyone using it at this time. `VisionInfo` is probably a better place for this information anyway, if it were needed.
+  See `#47 <https://github.com/ros-perception/vision_msgs/issues/47>`_ for earlier discussions.
+* Clarify: ObjectHypothesis[] ~= Classification (`#49 <https://github.com/ros-perception/vision_msgs/issues/49>`_)
+  * Clarify: ObjectHypothesis[] ~= Classification
+  https://github.com/ros-perception/vision_msgs/issues/46 requested Array message types for ObjectHypothesis and/or ObjectHypothesisWithPose. As pointed out in the issue, these already exist in the form of the `ClassificationXD` and `DetectionXD` message types.
+  * Clarify ObjectHypothesisWithPose[] ~= Detection
+* Use composition in ObjectHypothesisWithPose (`#48 <https://github.com/ros-perception/vision_msgs/issues/48>`_)
+* Contributors: Adam Allevato, Martin Günther, Martin Pecka, root
+
 2.0.0 (2020-08-11)
 ------------------
 * Fix lint error for draconian header guard rule
