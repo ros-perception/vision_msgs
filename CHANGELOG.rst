@@ -2,6 +2,11 @@
 Changelog for package vision_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Patch for how C++14 is set for ROS2 (`#58 <https://github.com/ros-perception/vision_msgs/issues/58>`_)
+* Contributors: Dustin Franklin
+
 3.0.0 (2021-04-13)
 ------------------
 * Add license snippet in CONTRIBUTING.md
