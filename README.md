@@ -42,10 +42,10 @@ classifier information.
 
 ## Messages
 
-  * Classification2D and Classification3D: pure classification without pose
-  * Detection2D and Detection3D: classification + pose
+  * Classification2D and Classification3D: pure classification without pose.
   * BoundingBox2D, BoundingBox3D: orientable rectangular bounding boxes,
     specified by the pose of their center and their size.
+  * Detection2D and Detection3D: classification + pose.
   * XArray messages, where X is one of the four message types listed above. A
     pipeline should emit XArray messages as its forward-facing ROS interface.
   * VisionInfo: Information about a classifier, such as its name and where
