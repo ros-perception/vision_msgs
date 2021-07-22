@@ -13,6 +13,7 @@ add_message_files(
   DIRECTORY msg
   FILES
   BoundingBox2D.msg
+  BoundingBox2DArray.msg
   BoundingBox3D.msg
   BoundingBox3DArray.msg
   Classification2D.msg
