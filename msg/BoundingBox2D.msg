@@ -5,7 +5,7 @@
 #   algorithm.
 
 # The 2D position (in pixels) and orientation of the bounding box center.
-geometry_msgs/Pose2D center
+geometry_msgs/Pose center
 
 # The total size (in pixels) of the bounding box surrounding the object relative
 #   to the pose of its center.
