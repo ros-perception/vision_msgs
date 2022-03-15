@@ -33,8 +33,8 @@ static inline msg::BoundingBox2D createAABB2D(
 {
   msg::BoundingBox2D bbox;
 
-  bbox.center.x = left + width / 2.0;
-  bbox.center.y = top + height / 2.0;
+  bbox.center.position.x = left + width / 2.0;
+  bbox.center.position.y = top + height / 2.0;
   bbox.size_x = width;
   bbox.size_y = height;
 
