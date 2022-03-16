@@ -27,6 +27,7 @@ set(msg_files
   msg/Detection3D.msg
   msg/ObjectHypothesis.msg
   msg/ObjectHypothesisWithPose.msg
+  msg/Pose2D.msg
   msg/VisionInfo.msg
 )
 
