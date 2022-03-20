@@ -2,8 +2,8 @@
 Changelog for package vision_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.0 (2022-03-19)
+------------------
 * Merge pull request `#67 <https://github.com/ros-perception/vision_msgs/issues/67>`_ from ijnek/ijnek-point-2d
   Add Point2d message, and use it in Pose2D
 * Update msg/Point2D.msg
