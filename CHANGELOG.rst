@@ -2,8 +2,8 @@
 Changelog for package vision_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+3.0.2 (2022-03-20)
+------------------
 * Build BoundingBox3DArray
 * Contributors: Adam Allevato
 
