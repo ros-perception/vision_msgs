@@ -2,8 +2,8 @@
 Changelog for package vision_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.2 (2022-04-09)
+------------------
 * Added BoundingBox2DArray message `#60 <https://github.com/ros-perception/vision_msgs/issues/60>`_ from Fruchtzwerg94/array_for_2d_bounding_box
 * Upgrade CMake version to avoid CMP0048 warning
 * add BoundingBox3DArray message (`#30 <https://github.com/ros-perception/vision_msgs/issues/30>`_)
