@@ -29,6 +29,8 @@ set(msg_files
   msg/ObjectHypothesisWithPose.msg
   msg/SemanticClass.msg
   msg/SemanticSegmentation.msg
+  msg/Point2D.msg
+  msg/Pose2D.msg
   msg/VisionInfo.msg
 )
 

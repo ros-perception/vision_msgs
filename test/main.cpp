@@ -21,8 +21,8 @@
 TEST(vision_msgs, CreateAABB2D)
 {
   vision_msgs::msg::BoundingBox2D bbox = vision_msgs::createAABB2D(1, 2, 3, 4);
-  EXPECT_FLOAT_EQ(bbox.center.x, 2.5);  // 1 + 3/2
-  EXPECT_FLOAT_EQ(bbox.center.y, 4);    // 2 + 4/2
+  EXPECT_FLOAT_EQ(bbox.center.position.x, 2.5);  // 1 + 3/2
+  EXPECT_FLOAT_EQ(bbox.center.position.y, 4);    // 2 + 4/2
   EXPECT_EQ(bbox.size_x, 3);
   EXPECT_EQ(bbox.size_y, 4);
   EXPECT_EQ(bbox.center.theta, 0);
