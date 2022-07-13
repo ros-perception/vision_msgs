@@ -23,10 +23,10 @@ set(msg_files
   msg/Detection2D.msg
   msg/Detection3DArray.msg
   msg/Detection3D.msg
+  msg/InferenceInfo.msg
   msg/ObjectHypothesis.msg
   msg/ObjectHypothesisWithPose.msg
-  msg/SemanticClass.msg
-  msg/SemanticSegmentation.msg
+  msg/VisionClass.msg
   msg/VisionInfo.msg
 )
 
