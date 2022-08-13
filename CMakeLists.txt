@@ -13,7 +13,9 @@ find_package(rosidl_default_generators REQUIRED)
 
 set(msg_files
   msg/BoundingBox2D.msg
+  msg/BoundingBox2DArray.msg
   msg/BoundingBox3D.msg
+  msg/BoundingBox3DArray.msg
   msg/Classification2D.msg
   msg/Classification3D.msg
   msg/Detection2DArray.msg
