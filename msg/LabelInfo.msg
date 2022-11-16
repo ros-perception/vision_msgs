@@ -6,8 +6,10 @@
 #   constant) over time, and so it is wasteful to send it with each individual
 #   result. By listening to these messages, subscribers will receive
 #   the context in which published vision messages are to be interpreted.
-# Each vision pipeline should publish its VisionInfo messages to its own topic,
+# Each vision pipeline should publish its LabelInfo messages to its own topic,
 #   in a manner similar to CameraInfo.
+# This message is meant to allow converting data from vision pipelines that
+#   return id based classifications back to human readable string class names.
 
 # Used for sequencing
 std_msgs/Header header

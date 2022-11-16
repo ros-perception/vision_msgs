@@ -47,13 +47,11 @@ http://wiki.ros.org/message_filters#Policy-Based_Synchronizer_.5BROS_1.1.2B-.5D)
 in your code, as the message's header should match the header of the source
 data.
 
-Semantic segmentation pipelines should use `sensor_msgs/Image` messages for publishing segmentation and confidence masks. This allows to use all the ROS tools for image processing easily and to choose the most lightweight encoding for each type of message. To transmit the metadata associated with the vision pipeline the [`/vision_msgs/InferenceInfo`](msg/InferenceInfo.msg) message can be used analogously to how `/sensor_msgs/CameraInfo` message and `/sensor_msgs/Image` are:
+Semantic segmentation pipelines should use `sensor_msgs/Image` messages for publishing segmentation and confidence masks. This allows systems to use standard ROS tools for image processing, and allows choosing the most compact image encoding appropriate for the task. To transmit the metadata associated with the vision pipeline, you should use the [`/vision_msgs/InferenceInfo`](msg/InferenceInfo.msg) message. This message works the same as `/sensor_msgs/CameraInfo` or [`/vision_msgs/VisionInfo`](msg/VisionInfo.msg):
 
-1. The `InferenceInfo` topic can be latched so that new nodes joining the ROS system can get the messages that were published since the beginning. In ROS2 this can be achieved using a `transient local` QoS profile.
+1.  Publish `InferenceInfo` to a topic. The topic should be at same namespace level as the associated image. That is, if your image is published at `/my_segmentation_node/image`, the `InferenceInfo` should be published at `/my_segmentation_node/inference_info`. Use a latched publisher for `InferenceInfo`, so that new nodes joining the ROS system can get the messages that were published since the beginning. In ROS2, this can be achieved using a `transient local` QoS profile.
 
 2. The subscribing node can get and store one `InferenceInfo` message and cancel its subscription after that. This assumes the provider of the message publishes it periodically.
-
-3. The `InferenceInfo` message can be synchronized with the `Image` messages that containing the segmentation mask and the confidence values of the inference of each pixel. This can be achieved using ROS's `message_filters`. The same [snippet](http://wiki.ros.org/message_filters#Policy-Based_Synchronizer_.5BROS_1.1.2B-.5D) mentioned above can work as an example.
 
 ## Messages
 
