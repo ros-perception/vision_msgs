@@ -25,8 +25,10 @@ set(msg_files
   msg/Detection2D.msg
   msg/Detection3DArray.msg
   msg/Detection3D.msg
+  msg/LabelInfo.msg
   msg/ObjectHypothesis.msg
   msg/ObjectHypothesisWithPose.msg
+  msg/VisionClass.msg
   msg/Point2D.msg
   msg/Pose2D.msg
   msg/VisionInfo.msg
