@@ -1,4 +1,17 @@
-#!/usr/bin/env python3
+# Copyright 2023 Open Source Robotics Foundation, Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 
 from math import pi
 
@@ -23,11 +36,11 @@ class pub_detection3_d_array(Node):
             return
         self.__header.stamp = self.get_clock().now().to_msg()
         self.__header.frame_id = "map"
-        
+
         # Reset counter and indices if counter is a multiple of 30
         if self.__counter % 10 == 0:
             self.__counter = 0
-        
+
         # Create a single BoundingBox3D message
         bbox = BoundingBox3D()
         quat = tf_transformations.quaternion_about_axis(
@@ -41,11 +54,11 @@ class pub_detection3_d_array(Node):
         bbox.center.position.y = 0.0
         bbox.size.x = (self.__counter % 10 + 1) * 0.1
         bbox.size.y = ((self.__counter + 1) % 5 + 1) * 0.1
-        bbox.size.z = ((self.__counter + 2) % 10 + 1) * 0.1        
+        bbox.size.z = ((self.__counter + 2) % 10 + 1) * 0.1
         # Publish the BoundingBox3D message
         self.__pub.publish(bbox)
         self.__counter += 1
-        
+
 
 def main(args=None):
     rclpy.init(args=args)
