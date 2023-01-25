@@ -12,6 +12,8 @@
 
 
   <depend>yaml-cpp</depend>
+  <depend>boost</depend>
+
 
   <depend>rclcpp</depend>
   <depend>rclpy</depend>
