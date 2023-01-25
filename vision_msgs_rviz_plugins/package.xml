@@ -11,7 +11,6 @@
   <buildtool_depend>ament_cmake_python</buildtool_depend>
 
 
-  <depend>qt5-default</depend>
   <depend>yaml-cpp</depend>
 
   <depend>rclcpp</depend>
