@@ -17,7 +17,7 @@ endif()
 
 # find dependencies
 find_package(Qt5 REQUIRED COMPONENTS Widgets Core)
-find_package(yaml-cpp REQUIRED)
+find_package(yaml_cpp_vendor REQUIRED)
 
 find_package(ament_cmake REQUIRED)
 find_package(ament_cmake_python REQUIRED)
@@ -75,7 +75,6 @@ target_link_libraries(${PROJECT_NAME} PUBLIC
   rviz_ogre_vendor::OgreMain
   rviz_ogre_vendor::OgreOverlay
   rviz_common::rviz_common
-  PRIVATE yaml-cpp
 )
 
 
@@ -90,6 +89,7 @@ ament_target_dependencies(${PROJECT_NAME}
   rviz_common
   rviz_rendering
   rviz_default_plugins
+  yaml_cpp_vendor
 )
 
 # Export the plugin to be imported by rviz2

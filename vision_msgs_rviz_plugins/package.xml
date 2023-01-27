@@ -12,7 +12,7 @@
   <buildtool_depend>ament_cmake_python</buildtool_depend>
 
 
-  <depend>yaml-cpp</depend>
+  <depend>yaml_cpp_vendor</depend>
   <depend>rviz2</depend>
 
 
