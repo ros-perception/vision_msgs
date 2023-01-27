@@ -25,7 +25,6 @@
 #include <vector>
 #include <unordered_map>
 
-#include <boost/algorithm/string.hpp>
 #include <rviz_common/display.hpp>
 #include <rviz_common/properties/bool_property.hpp>
 #include <rviz_common/properties/float_property.hpp>
@@ -100,7 +99,11 @@ protected:
     if (id == "") {
       color.setRgb(255, 22, 80, 255);
     } else {
-      std::string lowercaseId = boost::to_lower_copy(id);
+      std::for_each(
+        id.begin(), id.end(), [&](char & c) {
+          c = std::tolower(c, std::locale());
+        });
+      std::string lowercaseId = id;
       auto it = idToColorMap.find(lowercaseId);
       if (it != idToColorMap.end()) {
         color = it->second;

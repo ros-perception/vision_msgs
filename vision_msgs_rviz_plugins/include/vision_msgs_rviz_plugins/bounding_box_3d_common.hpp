@@ -22,7 +22,6 @@
 #include <algorithm>
 #include <vector>
 
-#include <boost/algorithm/string.hpp>
 #include <rviz_common/display.hpp>
 #include <rviz_common/properties/bool_property.hpp>
 #include <rviz_common/properties/float_property.hpp>

@@ -1,12 +1,12 @@
-person:
+Person:
   r: 255
   g: 0
   b: 0
-car:
+CAR:
   r: 255
   g: 255
   b: 255
-motorcycle:
+mOtorcycle:
   r: 100
   g: 0
   b: 255

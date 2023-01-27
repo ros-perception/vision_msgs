@@ -5,6 +5,7 @@
   <version>0.1.0</version>
   <description>RVIZ2 plugins for visualizing vision_msgs</description>
   <maintainer email="georg.novotny@aon.at">Georg Novotny</maintainer>
+  <maintainer email="stevenmacenski@gmail.com">Steve Macenski</maintainer>
   <license>Apache License 2.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
@@ -12,7 +13,7 @@
 
 
   <depend>yaml-cpp</depend>
-  <depend>boost</depend>
+  <depend>rviz2</depend>
 
 
   <depend>rclcpp</depend>

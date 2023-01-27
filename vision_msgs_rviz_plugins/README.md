@@ -1,6 +1,6 @@
 # vision_msgs_rviz_plugins
 
-This package contains a RVIZ2 plugin to display (some) vision_msgs for ROS 2.
+This package contains a RVIZ2 plugin to display vision_msgs for ROS 2.
 
 - [x] Detection3DArray
   - [x] Display ObjectHypothesisWithPose/score
@@ -29,17 +29,3 @@ This package contains a RVIZ2 plugin to display (some) vision_msgs for ROS 2.
     - [x] Linewidth
 
 ![Bounding Box Array](assets/BBoxArray.gif)
-
-## Install and Testing
-
-__Install:__
-```bash
-$ cd ros2_ws/src && git clone https://github.com/ros-perception/vision_msgs -b ros2
-$ cd ros2_ws && rosdep install --from src --ignore-src -r -y \
-  && colcon build --symlink-install --packages-up-to vision_msgs_rviz_plugins
-```
-
-__Testing:__
-```bash
-$ ros2 launch vision_msgs_rviz_plugins test_all.launch.py 
-```
