@@ -13,17 +13,28 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from math import pi
+from math import pi, sin, cos
+from numpy import array
+from numpy.linalg import norm
 import random
 
 import rclpy
 from rclpy.node import Node
-import tf_transformations
 from std_msgs.msg import Header
 from vision_msgs.msg import Detection3DArray
 from vision_msgs.msg import Detection3D
 from vision_msgs.msg import BoundingBox3D
 from vision_msgs.msg import ObjectHypothesisWithPose
+
+
+def quaternion_about_axis(angle, axis):
+    axis = array(axis)
+    axis = axis / norm(axis)
+    half_angle = angle / 2
+    sine = sin(half_angle)
+    w = cos(half_angle)
+    x, y, z = axis * sine
+    return x, y, z, w
 
 
 class pub_detection3_d_array(Node):
@@ -60,7 +71,7 @@ class pub_detection3_d_array(Node):
         for i in range(len(self.__msg_def["score"])):
             for j in range(len(self.__msg_def["score"])):
                 bbox = BoundingBox3D()
-                quat = tf_transformations.quaternion_about_axis(
+                quat = quaternion_about_axis(
                     (self.__counter % 100) * pi * 2 / 100.0, [0, 0, 1])
                 bbox.center.orientation.x = quat[0]
                 bbox.center.orientation.y = quat[1]

@@ -26,8 +26,7 @@
   <depend>vision_msgs</depend>
   
   <!-- Python Samples -->
-  <exec_depend>tf_transformations</exec_depend>
-  <exec_depend>python3-transforms3d</exec_depend>
+  <exec_depend>python3-numpy</exec_depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
