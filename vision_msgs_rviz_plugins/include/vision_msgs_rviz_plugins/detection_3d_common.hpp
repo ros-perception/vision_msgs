@@ -447,11 +447,7 @@ protected:
     marker->type = Marker::TEXT_VIEW_FACING;
     marker->action = Marker::ADD;
     marker->header = detection.header;
-    std::ostringstream oss;
-    oss << std::fixed;
-    oss << std::setprecision(2);
-    oss << score;
-    marker->text = oss.str();
+    marker->text = (std::ostringstream{} << std::fixed << std::setprecision(2) << score).str();
     marker->scale.z = 0.5;         // Set the size of the text
     marker->id = idx;
     marker->ns = "score";
