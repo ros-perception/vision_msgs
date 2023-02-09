@@ -15,7 +15,6 @@
 #ifndef VISION_MSGS_RVIZ_PLUGINS__DETECTION_3D_COMMON_HPP_
 #define VISION_MSGS_RVIZ_PLUGINS__DETECTION_3D_COMMON_HPP_
 
-#include <QWidget>
 #include <yaml-cpp/yaml.h>
 
 #include <memory>
@@ -26,6 +25,7 @@
 #include <iomanip>
 #include <unordered_map>
 
+#include <rcpputils/filesystem_helper.hpp>
 #include <rviz_common/display.hpp>
 #include <rviz_common/properties/bool_property.hpp>
 #include <rviz_common/properties/float_property.hpp>
