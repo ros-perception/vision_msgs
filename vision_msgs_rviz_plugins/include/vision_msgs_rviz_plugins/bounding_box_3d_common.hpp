@@ -15,7 +15,6 @@
 #ifndef VISION_MSGS_RVIZ_PLUGINS__BOUNDING_BOX_3D_COMMON_HPP_
 #define VISION_MSGS_RVIZ_PLUGINS__BOUNDING_BOX_3D_COMMON_HPP_
 
-#include <QWidget>
 #include <memory>
 #include <string>
 #include <map>
