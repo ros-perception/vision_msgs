@@ -88,15 +88,14 @@ protected:
     marker->pose.orientation.z = static_cast<double>(box.center.orientation.z);
     marker->pose.orientation.w = static_cast<double>(box.center.orientation.w);
 
-    if (box.size.x < 0.0 || box.size.y < 0.0 || box.size.z < 0.0)
-    {
+    if (box.size.x < 0.0 || box.size.y < 0.0 || box.size.z < 0.0) {
       std::ostringstream oss;
-        oss << "Error received BoundingBox3D message with size value less than zero.\n";
-        oss << "X: " << box.size.x << " Y: " << box.size.y << " Z: " << box.size.z;
-        RVIZ_COMMON_LOG_ERROR_STREAM(oss.str());
-        this->setStatus(
-          rviz_common::properties::StatusProperty::Error, "Scale", QString::fromStdString(
-            oss.str()));
+      oss << "Error received BoundingBox3D message with size value less than zero.\n";
+      oss << "X: " << box.size.x << " Y: " << box.size.y << " Z: " << box.size.z;
+      RVIZ_COMMON_LOG_ERROR_STREAM(oss.str());
+      this->setStatus(
+        rviz_common::properties::StatusProperty::Error, "Scale", QString::fromStdString(
+          oss.str()));
     }
 
     // Some systems can return BoundingBox3D messages with one dimension set to zero.
