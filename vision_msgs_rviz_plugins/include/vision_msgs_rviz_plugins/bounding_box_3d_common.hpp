@@ -90,11 +90,11 @@ protected:
       marker->scale.x = 1e-4;
     else
       marker->scale.x = static_cast<double>(box.size.x);
-    if (box.size.y == 0.0)
+    if (box.size.y < 1e-4)
       marker->scale.y = 1e-4;
     else
       marker->scale.y = static_cast<double>(box.size.y);
-    if (box.size.z == 0.0)
+    if (box.size.z < 1e-4)
       marker->scale.z = 1e-4;
     else
       marker->scale.z = static_cast<double>(box.size.z);
