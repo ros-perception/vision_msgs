@@ -87,17 +87,29 @@ protected:
     // (for example Isaac Sim can have a mesh that is only a plane)
     // This is not supported by Rviz markers so set the scale to a small value if this happens.
     if (box.size.x < 1e-4)
+    {
       marker->scale.x = 1e-4;
+    }
     else
+    {
       marker->scale.x = static_cast<double>(box.size.x);
+    }
     if (box.size.y < 1e-4)
+    {
       marker->scale.y = 1e-4;
+    }
     else
+    {
       marker->scale.y = static_cast<double>(box.size.y);
+    }
     if (box.size.z < 1e-4)
+    {
       marker->scale.z = 1e-4;
+    }
     else
+    {
       marker->scale.z = static_cast<double>(box.size.z);
+    }
 
     return marker;
   }
