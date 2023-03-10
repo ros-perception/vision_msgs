@@ -57,7 +57,7 @@ protected:
   std::vector<BillboardLinePtr> edges_;
 
   visualization_msgs::msg::Marker::SharedPtr get_marker(
-    const vision_msgs::msg::BoundingBox3D & box) const
+    const vision_msgs::msg::BoundingBox3D & box)
   {
     auto marker = std::make_shared<Marker>();
 
@@ -71,9 +71,35 @@ protected:
     marker->pose.orientation.y = static_cast<double>(box.center.orientation.y);
     marker->pose.orientation.z = static_cast<double>(box.center.orientation.z);
     marker->pose.orientation.w = static_cast<double>(box.center.orientation.w);
-    marker->scale.x = static_cast<double>(box.size.x);
-    marker->scale.y = static_cast<double>(box.size.y);
-    marker->scale.z = static_cast<double>(box.size.z);
+
+    if (box.size.x < 0.0 || box.size.y < 0.0 || box.size.z < 0.0) {
+      std::ostringstream oss;
+      oss << "Error received BoundingBox3D message with size value less than zero.\n";
+      oss << "X: " << box.size.x << " Y: " << box.size.y << " Z: " << box.size.z;
+      RVIZ_COMMON_LOG_ERROR_STREAM(oss.str());
+      this->setStatus(
+        rviz_common::properties::StatusProperty::Error, "Scale", QString::fromStdString(
+          oss.str()));
+    }
+
+    // Some systems can return BoundingBox3D messages with one dimension set to zero.
+    // (for example Isaac Sim can have a mesh that is only a plane)
+    // This is not supported by Rviz markers so set the scale to a small value if this happens.
+    if (box.size.x < 1e-4) {
+      marker->scale.x = 1e-4;
+    } else {
+      marker->scale.x = static_cast<double>(box.size.x);
+    }
+    if (box.size.y < 1e-4) {
+      marker->scale.y = 1e-4;
+    } else {
+      marker->scale.y = static_cast<double>(box.size.y);
+    }
+    if (box.size.z < 1e-4) {
+      marker->scale.z = 1e-4;
+    } else {
+      marker->scale.z = static_cast<double>(box.size.z);
+    }
 
     return marker;
   }
