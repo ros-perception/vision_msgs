@@ -9,5 +9,4 @@ vision_msgs/Pose2D center
 
 # The total size (in pixels) of the bounding box surrounding the object relative
 #   to the pose of its center.
-float64 size_x
-float64 size_y
+vision_msgs/Point2D size
