@@ -1,0 +1,46 @@
+<library path="vision_msgs_rviz_plugins">
+
+    <!-- Displays plugins -->
+  
+    <class
+      name="vision_msgs_rviz_plugins/Detection3DArray"
+      type="rviz_plugins::Detection3DArrayDisplay"
+      base_class_type="rviz_common::Display"
+    >
+      <description>
+        Convert an array of bounding boxes to markers and display them.
+      </description>
+      <message_type>vision_msgs::msg::Detection3DArray</message_type>
+    </class>
+    <class
+      name="vision_msgs_rviz_plugins/Detection3D"
+      type="rviz_plugins::Detection3DDisplay"
+      base_class_type="rviz_common::Display"
+    >
+      <description>
+        Convert one bounding boxes to markers and display it.
+      </description>
+      <message_type>vision_msgs::msg::Detection3D</message_type>
+    </class>
+    <class
+      name="vision_msgs_rviz_plugins/BoundingBox3D"
+      type="rviz_plugins::BoundingBox3DDisplay"
+      base_class_type="rviz_common::Display"
+    >
+      <description>
+        Display Bounding Box 3D via markers or edges
+      </description>
+      <message_type>vision_msgs::msg::BoundingBox3D</message_type>
+    </class>
+    <class
+      name="vision_msgs_rviz_plugins/BoundingBox3DArray"
+      type="rviz_plugins::BoundingBox3DArrayDisplay"
+      base_class_type="rviz_common::Display"
+    >
+      <description>
+        Display Bounding Box 3D Array via markers or edges
+      </description>
+      <message_type>vision_msgs::msg::BoundingBox3DArray</message_type>
+    </class>
+  
+  </library>

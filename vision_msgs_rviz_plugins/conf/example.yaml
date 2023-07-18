@@ -1,0 +1,24 @@
+Person:
+  r: 255
+  g: 0
+  b: 0
+CAR:
+  r: 255
+  g: 255
+  b: 255
+mOtorcycle:
+  r: 100
+  g: 0
+  b: 255
+skateboard:
+  r: 238
+  g: 130
+  b: 238
+house:
+  r: 106
+  g: 239
+  b: 255
+tree:
+  r: 142
+  g: 255
+  b: 0

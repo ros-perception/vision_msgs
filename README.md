@@ -75,6 +75,12 @@ can be fully represented are:
 Please see the `vision_msgs_examples` repository for some sample vision
 pipelines that emit results using the `vision_msgs` format.
 
+## RVIZ Plugins
+The second package enables the visualisation of different detectors in RVIZ2. 
+For more information about the capabilities, please see the [README](vision_msgs_rviz_plugins/README.md) file.
+
+![Bounding Box Array](./vision_msgs_rviz_plugins/assets/BBoxArray.gif)
+
 ## References
   * [1] [YOLO](https://pjreddie.com/darknet/yolo/)
   * [2] [TensorFlow MNIST](https://www.tensorflow.org/get_started/mnist/beginners)
