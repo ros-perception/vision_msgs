@@ -107,6 +107,7 @@ protected:
   void showBoxes(const BoundingBox3DArray::ConstSharedPtr & msg)
   {
     edges_.clear();
+    m_marker_common->clearMarkers();
 
     for (size_t idx = 0U; idx < msg->boxes.size(); idx++) {
       const auto marker_ptr = get_marker(msg->boxes[idx]);
@@ -118,6 +119,7 @@ protected:
       marker_ptr->ns = "bounding_box";
       marker_ptr->header = msg->header;
       marker_ptr->id = idx;
+      marker_ptr->lifetime = rclcpp::Duration(rclcpp::Duration::from_seconds(0.5));
       m_marker_common->addMessage(marker_ptr);
     }
   }
@@ -136,6 +138,7 @@ protected:
     marker_ptr->ns = "bounding_box";
     // marker_ptr->header = msg->header;
     marker_ptr->id = 0;
+    marker_ptr->lifetime = rclcpp::Duration(rclcpp::Duration::from_seconds(0.5));
     m_marker_common->addMessage(marker_ptr);
   }
 
