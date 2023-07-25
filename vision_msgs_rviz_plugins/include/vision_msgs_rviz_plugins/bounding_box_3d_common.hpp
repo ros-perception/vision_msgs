@@ -107,6 +107,7 @@ protected:
   void showBoxes(const BoundingBox3DArray::ConstSharedPtr & msg)
   {
     edges_.clear();
+    m_marker_common->clearMarkers();
 
     for (size_t idx = 0U; idx < msg->boxes.size(); idx++) {
       const auto marker_ptr = get_marker(msg->boxes[idx]);
@@ -125,6 +126,7 @@ protected:
   void showBoxes(const BoundingBox3D::ConstSharedPtr & msg)
   {
     edges_.clear();
+    m_marker_common->clearMarkers();
 
     const auto marker_ptr = get_marker(*msg);
     marker_ptr->header.frame_id = qPrintable(this->fixed_frame_);
