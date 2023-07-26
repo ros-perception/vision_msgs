@@ -146,6 +146,7 @@ protected:
     const bool show_score)
   {
     edges_.clear();
+    m_marker_common->clearMarkers();
     ClearScores(show_score);
 
     for (size_t idx = 0U; idx < msg->detections.size(); idx++) {
@@ -181,6 +182,7 @@ protected:
   void showBoxes(const vision_msgs::msg::Detection3D::ConstSharedPtr & msg, const bool show_score)
   {
     edges_.clear();
+    m_marker_common->clearMarkers();
     ClearScores(show_score);
 
     const auto marker_ptr = get_marker(msg->bbox);
