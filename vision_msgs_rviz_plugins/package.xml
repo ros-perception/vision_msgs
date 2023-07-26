@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>vision_msgs_rviz_plugins</name>
+  <version>4.1.0</version>
+  <description>RVIZ2 plugins for visualizing vision_msgs</description>
+  <maintainer email="georg.novotny@aon.at">Georg Novotny</maintainer>
+  <maintainer email="stevenmacenski@gmail.com">Steve Macenski</maintainer>
+  <license>Apache License 2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>ament_cmake_python</buildtool_depend>
+
+
+  <depend>yaml_cpp_vendor</depend>
+  <depend>rviz2</depend>
+
+
+  <depend>rclcpp</depend>
+  <depend>rclpy</depend>
+  <depend>pluginlib</depend>
+
+  <depend>rviz_common</depend>
+  <depend>rviz_default_plugins</depend>
+  <depend>rviz_rendering</depend>
+  <depend>vision_msgs</depend>
+  
+  <!-- Python Samples -->
+  <exec_depend>python3-numpy</exec_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
