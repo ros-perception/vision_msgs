@@ -45,7 +45,7 @@ void BoundingBox3DDisplay::onInitialize()
   m_marker_common->initialize(context_, scene_node_);
 
   topic_property_->setValue("bounding_box_3d");
-  topic_property_->setDescription("Detection3D topic to subscribe to.");
+  topic_property_->setDescription("BoundingBox3D topic to subscribe to.");
 
   line_width_property_->setMax(0.1);
   line_width_property_->setMin(0.01);
