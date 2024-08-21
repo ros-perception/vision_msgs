@@ -32,6 +32,7 @@ find_package(rviz_default_plugins REQUIRED)
 find_package(rviz_rendering REQUIRED)
 find_package(vision_msgs REQUIRED)
 
+find_package(resource_retriever_msgs REQUIRED)
 
 ## This setting causes Qt's "MOC" generation to happen automatically, which is required for
 ## Qt's signal/slot connections to work.
