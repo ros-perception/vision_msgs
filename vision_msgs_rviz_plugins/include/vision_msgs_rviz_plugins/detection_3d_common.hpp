@@ -17,15 +17,15 @@
 
 #include <yaml-cpp/yaml.h>
 
+#include <algorithm>
+#include <filesystem>
+#include <iomanip>
+#include <map>
 #include <memory>
 #include <string>
-#include <map>
-#include <algorithm>
-#include <vector>
-#include <iomanip>
 #include <unordered_map>
+#include <vector>
 
-#include <rcpputils/filesystem_helper.hpp>
 #include <rviz_common/display.hpp>
 #include <rviz_common/properties/bool_property.hpp>
 #include <rviz_common/properties/float_property.hpp>
@@ -513,7 +513,7 @@ protected:
   {
     std::ostringstream oss;
     const std::string tmp_path = string_property_->getStdString();
-    if (rcpputils::fs::exists(tmp_path)) {
+    if (std::filesystem::exists(tmp_path)) {
       color_config_path_ = tmp_path;
       std::ifstream fin(color_config_path_);
       YAML::Node config = YAML::Load(fin);
