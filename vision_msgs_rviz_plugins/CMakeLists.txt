@@ -82,15 +82,15 @@ target_link_libraries(${PROJECT_NAME} PUBLIC
 target_compile_definitions(${PROJECT_NAME} PRIVATE "RVIZ_DEFAULT_PLUGINS_BUILDING_LIBRARY")
 
 
-ament_target_dependencies(${PROJECT_NAME}
+target_link_libraries(${PROJECT_NAME}
   PUBLIC
-  rcpputils
-  rclcpp
-  vision_msgs
-  rviz_common
-  rviz_rendering
-  rviz_default_plugins
-  yaml_cpp_vendor
+  rcpputils::rcpputils
+  rclcpp::rclcpp
+  ${vision_msgs_TARGETS}
+  rviz_common::rviz_common
+  rviz_rendering::rviz_rendering
+  rviz_default_plugins::rviz_default_plugins
+  yaml-cpp::yaml-cpp
 )
 
 # Export the plugin to be imported by rviz2
