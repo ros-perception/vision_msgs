@@ -50,9 +50,9 @@ if(BUILD_TESTING)
 
   ament_add_gtest(vision_msgs_test test/main.cpp)
   add_dependencies(vision_msgs_test ${PROJECT_NAME})
-  ament_target_dependencies(vision_msgs_test
-    geometry_msgs
-    std_msgs
+  target_link_libraries(vision_msgs_test
+    ${geometry_msgs_TARGETS}
+    ${std_msgs_TARGETS}
   )
   # TODO(sloretz) rosidl_generate_interfaces() should make using generated messages in same project simpler
   target_include_directories(vision_msgs_test PUBLIC
