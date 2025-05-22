@@ -22,7 +22,6 @@ find_package(yaml_cpp_vendor REQUIRED)
 find_package(ament_cmake REQUIRED)
 find_package(ament_cmake_python REQUIRED)
 
-find_package(rcpputils)
 find_package(rclcpp REQUIRED)
 find_package(rclpy REQUIRED)
 
@@ -84,7 +83,6 @@ target_compile_definitions(${PROJECT_NAME} PRIVATE "RVIZ_DEFAULT_PLUGINS_BUILDIN
 
 ament_target_dependencies(${PROJECT_NAME}
   PUBLIC
-  rcpputils
   rclcpp
   vision_msgs
   rviz_common
@@ -103,7 +101,6 @@ ament_export_include_directories("include/${PROJECT_NAME}")
 ament_export_targets(${PROJECT_NAME} HAS_LIBRARY_TARGET)
 
 ament_export_dependencies(
-  rcpputils
   rclcpp
   vision_msgs
   rviz_common
