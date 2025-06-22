@@ -30,7 +30,7 @@ BoundingBox3DArrayDisplay::BoundingBox3DArrayDisplay()
   color_property_ = new rviz_common::properties::ColorProperty(
     "Color", Qt::yellow, "Color of bounding box", this, SLOT(updateColor()));
   lifetime_property_ = new rviz_common::properties::IntProperty(
-    "Bounding box lifetime", 0, "Bounding box lifetime", this, SLOT(updateLifetime()));
+    "Lifetime", 0, "Bounding box 3D array lifetime", this, SLOT(updateLifetime()));
 
     color = Qt::yellow;
 }
