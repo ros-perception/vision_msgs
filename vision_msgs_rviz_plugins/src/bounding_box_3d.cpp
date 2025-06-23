@@ -29,6 +29,9 @@ BoundingBox3DDisplay::BoundingBox3DDisplay()
     "Alpha", 1.0, "Transparency", this, SLOT(updateAlpha()));
   color_property_ = new rviz_common::properties::ColorProperty(
     "Color", Qt::yellow, "Color of bounding box", this, SLOT(updateColor()));
+  lifetime_property_ = new rviz_common::properties::IntProperty(
+    "Lifetime", 0, "Bounding box 3D lifetime", this, SLOT(updateLifetime()));
+
   color = Qt::yellow;
 }
 
@@ -56,6 +59,7 @@ void BoundingBox3DDisplay::onInitialize()
 
   line_width = line_width_property_->getFloat();
   alpha = alpha_property_->getFloat();
+  lifetime = lifetime_property_->getInt();
 
   only_edge_ = only_edge_property_->getBool();
 }
@@ -110,6 +114,14 @@ void BoundingBox3DDisplay::updateEdge()
 void BoundingBox3DDisplay::updateLineWidth()
 {
   line_width = line_width_property_->getFloat();
+  if (latest_msg) {
+    processMessage(latest_msg);
+  }
+}
+
+void BoundingBox3DDisplay::updateLifetime()
+{
+  lifetime = lifetime_property_->getInt();
   if (latest_msg) {
     processMessage(latest_msg);
   }
