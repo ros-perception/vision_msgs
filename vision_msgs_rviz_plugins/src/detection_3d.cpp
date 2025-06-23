@@ -32,6 +32,8 @@ Detection3DDisplay::Detection3DDisplay()
   string_property_ = new rviz_common::properties::StringProperty(
     "ConfigPath", "", "Path to yaml config for rgb color mappings", this,
     SLOT(updateColorConfigs()));
+  lifetime_property_ = new rviz_common::properties::IntProperty(
+    "Lifetime", 0, "Detection 3D lifetime", this, SLOT(updateLifetime()));
 }
 
 Detection3DDisplay::~Detection3DDisplay()
@@ -59,6 +61,7 @@ void Detection3DDisplay::onInitialize()
 
   line_width = line_width_property_->getFloat();
   alpha = alpha_property_->getFloat();
+  lifetime = lifetime_property_->getInt();
 
   only_edge_ = only_edge_property_->getBool();
   show_score_ = show_score_property_->getBool();
@@ -122,6 +125,14 @@ void Detection3DDisplay::updateLineWidth()
 void Detection3DDisplay::updateAlpha()
 {
   alpha = alpha_property_->getFloat();
+  if (latest_msg) {
+    processMessage(latest_msg);
+  }
+}
+
+void Detection3DDisplay::updateLifetime()
+{
+  lifetime = lifetime_property_->getInt();
   if (latest_msg) {
     processMessage(latest_msg);
   }
