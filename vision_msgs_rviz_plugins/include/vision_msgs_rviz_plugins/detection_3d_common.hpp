@@ -60,6 +60,7 @@ public:
 
 protected:
   float line_width, alpha;
+  int lifetime{0};
   std::unique_ptr<MarkerCommon> m_marker_common;
   std::vector<BillboardLinePtr> edges_;
   std::string color_config_path_;

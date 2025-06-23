@@ -45,13 +45,14 @@ public:
   using BoundingBox3DArray = vision_msgs::msg::BoundingBox3DArray;
 
   BoundingBox3DCommon()
-  : rviz_common::RosTopicDisplay<MessageType>(), line_width(0.05), alpha(),
+  : rviz_common::RosTopicDisplay<MessageType>(), line_width(0.05), alpha(), lifetime(0),
     m_marker_common(std::make_unique<MarkerCommon>(
         this)), color(Qt::yellow) {}
   ~BoundingBox3DCommon() {}
 
 protected:
   float line_width, alpha;
+  int lifetime;
   std::unique_ptr<MarkerCommon> m_marker_common;
   QColor color;
   std::vector<BillboardLinePtr> edges_;
@@ -115,6 +116,10 @@ protected:
       marker_ptr->color.r = color.red() / 255.0;
       marker_ptr->color.g = color.green() / 255.0;
       marker_ptr->color.b = color.blue() / 255.0;
+      builtin_interfaces::msg::Duration duration_msg;
+      duration_msg.sec = static_cast<int32_t>(lifetime);
+      duration_msg.nanosec = static_cast<uint32_t>(0);
+      marker_ptr->lifetime = duration_msg;
       marker_ptr->color.a = alpha;
       marker_ptr->ns = "bounding_box";
       marker_ptr->header = msg->header;
@@ -131,6 +136,10 @@ protected:
     const auto marker_ptr = get_marker(*msg);
     marker_ptr->header.frame_id = qPrintable(this->fixed_frame_);
     marker_ptr->header.stamp = rclcpp::Clock().now();
+    builtin_interfaces::msg::Duration duration_msg;
+    duration_msg.sec = static_cast<int32_t>(lifetime);
+    duration_msg.nanosec = static_cast<uint32_t>(0);
+    marker_ptr->lifetime = duration_msg;
     marker_ptr->color.r = color.red() / 255.0;
     marker_ptr->color.g = color.green() / 255.0;
     marker_ptr->color.b = color.blue() / 255.0;
