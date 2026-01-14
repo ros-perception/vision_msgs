@@ -14,7 +14,8 @@
 # limitations under the License.
 
 
-from math import pi, sin, cos
+from math import cos, pi, sin
+
 from numpy import array
 from numpy.linalg import norm
 
@@ -35,10 +36,11 @@ def quaternion_about_axis(angle, axis):
 
 
 class pub_detection3_d_array(Node):
+
     def __init__(self):
-        super().__init__("pub_bounding_box_3_d_array_sample")
+        super().__init__('pub_bounding_box_3_d_array_sample')
         self.__pub = self.create_publisher(
-            BoundingBox3DArray, "bounding_box_3d_array", 10)
+            BoundingBox3DArray, 'bounding_box_3d_array', 10)
         self.__timer = self.create_timer(0.1, self.pub_sample)
         self.__counter = 0
         self.__header = Header()
@@ -47,7 +49,7 @@ class pub_detection3_d_array(Node):
         while self.__pub.get_subscription_count() == 0:
             return
         self.__header.stamp = self.get_clock().now().to_msg()
-        self.__header.frame_id = "map"
+        self.__header.frame_id = 'map'
         msg = BoundingBox3DArray()
         msg.header = self.__header
         for i in range(5):

@@ -22,36 +22,36 @@ from launch_ros.actions import Node
 def generate_launch_description():
     # Get the urdf file
     rviz_path = os.path.join(
-        get_package_share_directory("vision_msgs_rviz_plugins"),
-        "conf", "conf.rviz"
+        get_package_share_directory('vision_msgs_rviz_plugins'),
+        'conf', 'conf.rviz'
     )
 
     return LaunchDescription([
         Node(
-            package="vision_msgs_rviz_plugins",
-            executable="BoundingBox3D.py",
-            name="boundingbox3d_test"
+            package='vision_msgs_rviz_plugins',
+            executable='BoundingBox3D.py',
+            name='boundingbox3d_test'
         ),
         Node(
-            package="vision_msgs_rviz_plugins",
-            executable="BoundingBox3DArray.py",
-            name="boundingbox3darray_test"
+            package='vision_msgs_rviz_plugins',
+            executable='BoundingBox3DArray.py',
+            name='boundingbox3darray_test'
         ),
         Node(
-            package="vision_msgs_rviz_plugins",
-            executable="Detection3D.py",
-            name="detection3d_test"
+            package='vision_msgs_rviz_plugins',
+            executable='Detection3D.py',
+            name='detection3d_test'
         ),
         Node(
-            package="vision_msgs_rviz_plugins",
-            executable="Detection3DArray.py",
-            name="detection3darray_test"
+            package='vision_msgs_rviz_plugins',
+            executable='Detection3DArray.py',
+            name='detection3darray_test'
         ),
         Node(
-            package="rviz2",
-            executable="rviz2",
-            name="rviz2",
-            arguments=["-d", rviz_path]
+            package='rviz2',
+            executable='rviz2',
+            name='rviz2',
+            arguments=['-d', rviz_path]
         )
 
     ])
