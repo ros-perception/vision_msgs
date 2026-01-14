@@ -32,7 +32,7 @@ BoundingBox3DArrayDisplay::BoundingBox3DArrayDisplay()
   lifetime_property_ = new rviz_common::properties::IntProperty(
     "Lifetime", 0, "Bounding box 3D array lifetime", this, SLOT(updateLifetime()));
 
-    color = Qt::yellow;
+  color = Qt::yellow;
 }
 
 BoundingBox3DArrayDisplay::~BoundingBox3DArrayDisplay()
@@ -81,7 +81,9 @@ void BoundingBox3DArrayDisplay::processMessage(
   }
 }
 
-void BoundingBox3DArrayDisplay::update(float wall_dt, float ros_dt)
+void BoundingBox3DArrayDisplay::update(
+  std::chrono::nanoseconds wall_dt,
+  std::chrono::nanoseconds ros_dt)
 {
   m_marker_common->update(wall_dt, ros_dt);
 }

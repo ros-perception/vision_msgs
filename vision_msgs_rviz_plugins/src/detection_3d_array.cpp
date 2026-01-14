@@ -84,7 +84,9 @@ void Detection3DArrayDisplay::processMessage(
   }
 }
 
-void Detection3DArrayDisplay::update(float wall_dt, float ros_dt)
+void Detection3DArrayDisplay::update(
+  std::chrono::nanoseconds wall_dt,
+  std::chrono::nanoseconds ros_dt)
 {
   m_marker_common->update(wall_dt, ros_dt);
 }

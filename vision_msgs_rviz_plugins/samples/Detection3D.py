@@ -14,16 +14,17 @@
 # limitations under the License.
 
 
-from math import pi, sin, cos
+from math import cos, pi, sin
+import random
+
 from numpy import array
 from numpy.linalg import norm
-import random
 
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Header
-from vision_msgs.msg import Detection3D
 from vision_msgs.msg import BoundingBox3D
+from vision_msgs.msg import Detection3D
 from vision_msgs.msg import ObjectHypothesisWithPose
 
 
@@ -38,16 +39,17 @@ def quaternion_about_axis(angle, axis):
 
 
 class pub_detection3_d_array(Node):
+
     def __init__(self):
-        super().__init__("pub_detection3_d_sample")
+        super().__init__('pub_detection3_d_sample')
         self.__pub = self.create_publisher(
-            Detection3D, "detection3_d", 10)
+            Detection3D, 'detection3_d', 10)
         self.__timer = self.create_timer(0.1, self.pub_sample)
         self.__counter = 0
         self.__header = Header()
         self.__msg_def = {
-            "score": [0.0, 1.0, 2.0, 3.0, 1.0],
-            "obj_id": ["", "", "car", "cyclist", "tree"]
+            'score': [0.0, 1.0, 2.0, 3.0, 1.0],
+            'obj_id': ['', '', 'car', 'cyclist', 'tree']
         }
 
     def create_msg(self, bbox: BoundingBox3D, scores, obj_ids) -> Detection3D:
@@ -65,15 +67,15 @@ class pub_detection3_d_array(Node):
         while self.__pub.get_subscription_count() == 0:
             return
         self.__header.stamp = self.get_clock().now().to_msg()
-        self.__header.frame_id = "map"
+        self.__header.frame_id = 'map'
 
         # Reset counter and indices if counter is a multiple of 30
         if self.__counter % 10 == 0:
             self.__counter = 0
 
         # Get the current score and object ID
-        score = random.sample(self.__msg_def["score"], 1)[0]
-        obj_id = random.sample(self.__msg_def["obj_id"], 1)[0]
+        score = random.sample(self.__msg_def['score'], 1)[0]
+        obj_id = random.sample(self.__msg_def['obj_id'], 1)[0]
 
         # Create a single Detection3D message
         bbox = BoundingBox3D()
