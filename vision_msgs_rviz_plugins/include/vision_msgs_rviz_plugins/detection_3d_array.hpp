@@ -16,6 +16,7 @@
 #define VISION_MSGS_RVIZ_PLUGINS__DETECTION_3D_ARRAY_HPP_
 
 #include <QWidget>
+#include <chrono>
 #include <memory>
 #include <rviz_common/display.hpp>
 #include <rviz_common/properties/bool_property.hpp>
@@ -58,7 +59,7 @@ public:
   DETECTION_3D_ARRAY_DISPLAY_HPP_PUBLIC
   void load(const rviz_common::Config & config) override;
   DETECTION_3D_ARRAY_DISPLAY_HPP_PUBLIC
-  void update(float wall_dt, float ros_dt) override;
+  void update(std::chrono::nanoseconds wall_dt, std::chrono::nanoseconds ros_dt) override;
   DETECTION_3D_ARRAY_DISPLAY_HPP_PUBLIC
   void reset() override;
 

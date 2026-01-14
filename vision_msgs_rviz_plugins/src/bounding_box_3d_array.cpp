@@ -81,7 +81,7 @@ void BoundingBox3DArrayDisplay::processMessage(
   }
 }
 
-void BoundingBox3DArrayDisplay::update(float wall_dt, float ros_dt)
+void BoundingBox3DArrayDisplay::update(std::chrono::nanoseconds wall_dt, std::chrono::nanoseconds ros_dt)
 {
   m_marker_common->update(wall_dt, ros_dt);
 }
